@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+<title>先进班集体推荐表</title>
+</head>
+<body id="page">
+  <form method="post"  action="postdate" onSubmit="return checktext('Wyuadvancedclass')">
+<h2>基本情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <th>学院</th>
+    <td><input id="xueyuan" type="text" name="xueyuan" style="width:100px" value={$wyuadvancedclass.xueyuan}></td>
+  </tr>
+  <tr>
+    <th>时间（例2017-09-01）</th>
+    <td><input id="years" type="text" name="years" style="width:100px" value={$wyuadvancedclass.years}>-<input id="months" type="text" name="months" style="width:100px" value={$wyuadvancedclass.months}>-<input id="days" type="text" name="days" style="width:100px" value={$wyuadvancedclass.days}></td>
+  </tr>
+  <tr>
+    <th>班级（简称）</th>
+    <td><input id="banji" type="text" name="banji" style="width:100px" value={$wyuadvancedclass.banji}></td>
+  </tr>
+  <tr>
+    <th>人数</th>
+    <td><input id="renshu" type="text" name="renshu" style="width:100px" value={$wyuadvancedclass.renshu}></td>
+  </tr>
+  <tr>
+    <th>班长姓名</th>
+    <td><input id="bzxm" type="text" name="bzxm" style="width:100px" value={$wyuadvancedclass.bzxm}></td>
+  </tr>
+  <tr>
+    <th>班导师姓名</th>
+    <td><input id="bdsxm" type="text" name="bdsxm" style="width:100px" value={$wyuadvancedclass.bdsxm}></td>
+  </tr>
+  <tr>
+    <th>班级联系电话</th>
+    <td><input id="lxdh" type="text" name="lxdh" style="width:100px" value={$wyuadvancedclass.lxdh}></td>
+  </tr>
+  <tr>
+    <th>主要先进事迹简介</th>
+    <td><textarea id="xjsj" name="xjsj"style="width: 400px; height: 201px;padding: 10px 3px 3px 5px;" >{$wyuadvancedclass.xjsj}</textarea></td>
+  </tr>
+</table>
+        <div id='submit'  align = "center" >
+        <button type="submit" >提交</button><br/><br/>
+        </div>
+  </from>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+
+<title>五邑大学家庭经济困难学生认定分析表 </title>
+</head>
+<body id="page">
+<form method="post"  action="postdate" onSubmit="return checktext('Povertysl')">
+<h2>五邑大学家庭经济困难学生认定分析表</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>家庭情况</th>
+    <td>类别</td>
+    <th>证明材料（学校核实）</th>
+    <td>证明材料复印件（学校存档备查）</td>
+    <th>是否符合</th>
+    <td>是否提供证明材料审核</td>
+    <th>是否提供证明材料复印件存档</th>
+    <td>备注</td>
+  </tr>
+  <tr>
+    <th>建档立卡户 </th>
+    <td>A</td>
+    <th>扶贫帮扶手册、户口簿、相关证明</th>
+    <td>扶贫帮扶手册、户口簿、相关证明</td>
+    <th><input name="jdlkhfh" type="radio" value="是" /> 是
+            <input name="jdlkhfh" type="radio" value="否" /> 否</th><script>initradio('jdlkhfh',"{$povertysl.jdlkhfh}");</script>
+    <td><input name="jdlkhsh" type="radio" value="是" /> 是
+            <input name="jdlkhsh" type="radio" value="否" /> 否</td><script>initradio('jdlkhsh',"{$povertysl.jdlkhsh}");</script>
+    <th><input name="jdlkhcd" type="radio" value="是" /> 是
+            <input name="jdlkhcd" type="radio" value="否" /> 否</th><script>initradio('jdlkhcd',"{$povertysl.jdlkhcd}");</script>
+    <td><input id="jdlkhbz" type="text" name="jdlkhbz" style="width:100px" value={$povertysl.jdlkhbz} ></td>
+  </tr>
+    <tr>
+    <th>特困供养人员   </th>
+    <td>A</td>
+    <th>五保证、特困人员救助供养证、户口簿</th>
+    <td>五保证、特困人员救助供养证、户口簿</td>
+    <th><input name="tkgyryfh" type="radio" value="是" /> 是
+            <input name="tkgyryfh" type="radio" value="否" /> 否</th><script>initradio('tkgyryfh',"{$povertysl.tkgyryfh}");</script>
+    <td><input name="tkgyrysh" type="radio" value="是" /> 是
+            <input name="tkgyrysh" type="radio" value="否" /> 否</td><script>initradio('tkgyrysh',"{$povertysl.tkgyrysh}");</script>
+    <th><input name="tkgyrycd" type="radio" value="是" /> 是
+            <input name="tkgyrycd" type="radio" value="否" /> 否</th><script>initradio('tkgyrycd',"{$povertysl.tkgyrycd}");</script>
+    <td><input id="tkgyrybz" type="text" name="tkgyrybz" style="width:100px" value={$povertysl.tkgyrybz} ></td>
+  </tr>
+    <tr>
+    <th>孤儿 </th>
+    <td>A</td>
+    <th>儿童福利证、孤儿证明</th>
+    <td>儿童福利证、孤儿证明</td>
+    <th><input name="guerfh" type="radio" value="是" /> 是
+            <input name="guerfh" type="radio" value="否" /> 否</th><script>initradio('guerfh',"{$povertysl.guerfh}");</script>
+    <td><input name="guersh" type="radio" value="是" /> 是
+            <input name="guersh" type="radio" value="否" /> 否</td><script>initradio('guersh',"{$povertysl.guersh}");</script>
+    <th><input name="guercd" type="radio" value="是" /> 是
+            <input name="guercd" type="radio" value="否" /> 否</th><script>initradio('guercd',"{$povertysl.guercd}");</script>
+    <td><input id="guerbz" type="text" name="guerbz" style="width:100px" value={$povertysl.guerbz} ></td>
+  </tr>
+    <tr>
+    <th>城乡最低生活保障户 </th>
+    <td>A</td>
+    <th>低保证、户口簿</th>
+    <td>低保证、户口簿</td>
+    <th><input name="cszdshbzhfh" type="radio" value="是" /> 是
+            <input name="cszdshbzhfh" type="radio" value="否" /> 否</th><script>initradio('cszdshbzhfh',"{$povertysl.cszdshbzhfh}");</script>
+    <td><input name="cszdshbzhsh" type="radio" value="是" /> 是
+            <input name="cszdshbzhsh" type="radio" value="否" /> 否</td><script>initradio('cszdshbzhsh',"{$povertysl.cszdshbzhsh}");</script>
+    <th><input name="cszdshbzhcd" type="radio" value="是" /> 是
+            <input name="cszdshbzhcd" type="radio" value="否" /> 否</th><script>initradio('cszdshbzhcd',"{$povertysl.cszdshbzhcd}");</script>
+    <td><input id="cszdshbzhbz" type="text" name="cszdshbzhbz" style="width:100px" value={$povertysl.cszdshbzhbz} ></td>
+  </tr>
+    <tr>
+    <th>特困职工子女 </th>
+    <td>A</td>
+    <th>特困职工证、户口簿</th>
+    <td>特困职工证、户口簿</td>
+    <th><input name="tkzgznfh" type="radio" value="是" /> 是
+            <input name="tkzgznfh" type="radio" value="否" /> 否</th><script>initradio('tkzgznfh',"{$povertysl.tkzgznfh}");</script>
+    <td><input name="tkzgznsh" type="radio" value="是" /> 是
+            <input name="tkzgznsh" type="radio" value="否" /> 否</td><script>initradio('tkzgznsh',"{$povertysl.tkzgznsh}");</script>
+    <th><input name="tkzgzncd" type="radio" value="是" /> 是
+            <input name="tkzgzncd" type="radio" value="否" /> 否</th><script>initradio('tkzgzncd',"{$povertysl.tkzgzncd}");</script>
+    <td><input id="tkzgznbz" type="text" name="tkzgznbz" style="width:100px" value={$povertysl.tkzgznbz} ></td>
+  </tr>
+    <tr>
+    <th>城镇低收入困难家庭 </th>
+    <td>A</td>
+    <th>救助证、低收入证、户口簿</th>
+    <td>救助证、低收入证、户口簿</td>
+    <th><input name="czdsrknjtfh" type="radio" value="是" /> 是
+            <input name="czdsrknjtfh" type="radio" value="否" /> 否</th><script>initradio('czdsrknjtfh',"{$povertysl.czdsrknjtfh}");</script>
+    <td><input name="czdsrknjtsh" type="radio" value="是" /> 是
+            <input name="czdsrknjtsh" type="radio" value="否" /> 否</td><script>initradio('czdsrknjtsh',"{$povertysl.czdsrknjtsh}");</script>
+    <th><input name="czdsrknjtcd" type="radio" value="是" /> 是
+            <input name="czdsrknjtcd" type="radio" value="否" /> 否</th><script>initradio('czdsrknjtcd',"{$povertysl.czdsrknjtcd}");</script>
+    <td><input id="czdsrknjtbz" type="text" name="czdsrknjtbz" style="width:100px" value={$povertysl.czdsrknjtbz} ></td>
+  </tr>
+    <tr>
+    <th>享受国家定期抚恤补助的优抚对象（含烈士、牺牲军人亲属）、因公牺牲警察子女 </th>
+    <td>A</td>
+    <th>优抚对象证明、因公牺牲警察证明、户口簿</th>
+    <td>优抚对象证明、因公牺牲警察证明、户口簿</td>
+    <th><input name="yfdxfh" type="radio" value="是" /> 是
+            <input name="yfdxfh" type="radio" value="否" /> 否</th><script>initradio('yfdxfh',"{$povertysl.yfdxfh}");</script>
+    <td><input name="yfdxsh" type="radio" value="是" /> 是
+            <input name="yfdxsh" type="radio" value="否" /> 否</td><script>initradio('yfdxsh',"{$povertysl.yfdxsh}");</script>
+    <th><input name="yfdxcd" type="radio" value="是" /> 是
+            <input name="yfdxcd" type="radio" value="否" /> 否</th><script>initradio('yfdxcd',"{$povertysl.yfdxcd}");</script>
+    <td><input id="yfdxbz" type="text" name="yfdxbz" style="width:100px" value={$povertysl.yfdxbz} ></td>
+  </tr>
+    <tr>
+    <th>一年内家庭遭受重大自然灾害，受灾严重（一年内） </th>
+    <td>A</td>
+    <th>民政等部门相关证明</th>
+    <td>民政等部门相关证明</td>
+    <th><input name="ynzdzrzhfh" type="radio" value="是" /> 是
+            <input name="ynzdzrzhfh" type="radio" value="否" /> 否</th><script>initradio('ynzdzrzhfh',"{$povertysl.ynzdzrzhfh}");</script>
+    <td><input name="ynzdzrzhsh" type="radio" value="是" /> 是
+            <input name="ynzdzrzhsh" type="radio" value="否" /> 否</td><script>initradio('ynzdzrzhsh',"{$povertysl.ynzdzrzhsh}");</script>
+    <th><input name="ynzdzrzhcd" type="radio" value="是" /> 是
+            <input name="ynzdzrzhcd" type="radio" value="否" /> 否</th><script>initradio('ynzdzrzhcd',"{$povertysl.ynzdzrzhcd}");</script>
+    <td><input id="ynzdzrzhbz" type="text" name="ynzdzrzhbz" style="width:100px" value={$povertysl.ynzdzrzhbz} ></td>
+  </tr>
+    <tr>
+    <th>一年内家庭遭重大突发意外事件（不含自然灾害）（一年内） </th>
+    <td>A</td>
+    <th>相关证明</th>
+    <td>相关证明</td>
+    <th><input name="yntuywsjfh" type="radio" value="是" /> 是
+            <input name="yntuywsjfh" type="radio" value="否" /> 否</th><script>initradio('yntuywsjfh',"{$povertysl.yntuywsjfh}");</script>
+    <td><input name="yntuywsjsh" type="radio" value="是" /> 是
+            <input name="yntuywsjsh" type="radio" value="否" /> 否</td><script>initradio('yntuywsjsh',"{$povertysl.yntuywsjsh}");</script>
+    <th><input name="yntuywsjcd" type="radio" value="是" /> 是
+            <input name="yntuywsjcd" type="radio" value="否" /> 否</th><script>initradio('yntuywsjcd',"{$povertysl.yntuywsjcd}");</script>
+    <td><input id="yntuywsjbz" type="text" name="yntuywsjbz" style="width:100px" value={$povertysl.yntuywsjbz} ></td>
+  </tr>
+    <tr>
+    <th>残疾学生 </th>
+    <td>A</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="cjxsfh" type="radio" value="是" /> 是
+            <input name="cjxsfh" type="radio" value="否" /> 否</th><script>initradio('cjxsfh',"{$povertysl.cjxsfh}");</script>
+    <td><input name="cjxssh" type="radio" value="是" /> 是
+            <input name="cjxssh" type="radio" value="否" /> 否</td><script>initradio('cjxssh',"{$povertysl.cjxssh}");</script>
+    <th><input name="cjxscd" type="radio" value="是" /> 是
+            <input name="cjxscd" type="radio" value="否" /> 否</th><script>initradio('cjxscd',"{$povertysl.cjxscd}");</script>
+    <td><input id="cjxsbz" type="text" name="cjxsbz" style="width:100px" value={$povertysl.cjxsbz} ></td>
+  </tr>
+    <tr>
+    <th>父母均患重大疾病(不含残疾） </th>
+    <td>A</td>
+    <th>相关证明、户口簿</th>
+    <td>相关证明、户口簿</td>
+    <th><input name="fmjhzdjbfh" type="radio" value="是" /> 是
+            <input name="fmjhzdjbfh" type="radio" value="否" /> 否</th><script>initradio('fmjhzdjbfh',"{$povertysl.fmjhzdjbfh}");</script>
+    <td><input name="fmjhzdjbsh" type="radio" value="是" /> 是
+            <input name="fmjhzdjbsh" type="radio" value="否" /> 否</td><script>initradio('fmjhzdjbsh',"{$povertysl.fmjhzdjbsh}");</script>
+    <th><input name="fmjhzdjbcd" type="radio" value="是" /> 是
+            <input name="fmjhzdjbcd" type="radio" value="否" /> 否</th><script>initradio('fmjhzdjbcd',"{$povertysl.fmjhzdjbcd}");</script>
+    <td><input id="fmjhzdjbbz" type="text" name="fmjhzdjbbz" style="width:100px" value={$povertysl.fmjhzdjbbz} ></td>
+  </tr>
+    <tr>
+    <th>父母一方患重大疾病（不含残疾） </th>
+    <td>D</td>
+    <th>相关证明、户口簿</th>
+    <td>相关证明、户口簿</td>
+    <th><input name="fmyfhzdjbfh" type="radio" value="是" /> 是
+            <input name="fmyfhzdjbfh" type="radio" value="否" /> 否</th><script>initradio('fmyfhzdjbfh',"{$povertysl.fmyfhzdjbfh}");</script>
+    <td><input name="fmyfhzdjbsh" type="radio" value="是" /> 是
+            <input name="fmyfhzdjbsh" type="radio" value="否" /> 否</td><script>initradio('fmyfhzdjbsh',"{$povertysl.fmyfhzdjbsh}");</script>
+    <th><input name="fmyfhzdjbcd" type="radio" value="是" /> 是
+            <input name="fmyfhzdjbcd" type="radio" value="否" /> 否</th><script>initradio('fmyfhzdjbcd',"{$povertysl.fmyfhzdjbcd}");</script>
+    <td><input id="fmyfhzdjbbz" type="text" name="fmyfhzdjbbz" style="width:100px" value={$povertysl.fmyfhzdjbbz} ></td>
+  </tr>
+    <tr>
+    <th>其他家庭成员（含学生本人）患重大疾病（不含残疾） </th>
+    <td>E</td>
+    <th>相关证明、户口簿</th>
+    <td>相关证明、户口簿</td>
+    <th><input name="qtjtcyhzdjbfh" type="radio" value="是" /> 是
+            <input name="qtjtcyhzdjbfh" type="radio" value="否" /> 否</th><script>initradio('qtjtcyhzdjbfh',"{$povertysl.qtjtcyhzdjbfh}");</script>
+    <td><input name="qtjtcyhzdjbsh" type="radio" value="是" /> 是
+            <input name="qtjtcyhzdjbsh" type="radio" value="否" /> 否</td><script>initradio('qtjtcyhzdjbsh',"{$povertysl.qtjtcyhzdjbsh}");</script>
+    <th><input name="qtjtcyhzdjbcd" type="radio" value="是" /> 是
+            <input name="qtjtcyhzdjbcd" type="radio" value="否" /> 否</th><script>initradio('qtjtcyhzdjbcd',"{$povertysl.qtjtcyhzdjbcd}");</script>
+    <td><input id="qtjtcyhzdjbbz" type="text" name="qtjtcyhzdjbbz" style="width:100px" value={$povertysl.qtjtcyhzdjbbz} ></td>
+  </tr>
+    <tr>
+    <th>家庭遭受重大自然灾害，受灾严重（一年以上两年以内） </th>
+    <td>B</td>
+    <th>民政等部门相关证明</th>
+    <td>民政等部门相关证明</td>
+    <th><input name="lnzdzrzhfh" type="radio" value="是" /> 是
+            <input name="lnzdzrzhfh" type="radio" value="否" /> 否</th><script>initradio('lnzdzrzhfh',"{$povertysl.lnzdzrzhfh}");</script>
+    <td><input name="lnzdzrzhsh" type="radio" value="是" /> 是
+            <input name="lnzdzrzhsh" type="radio" value="否" /> 否</td><script>initradio('lnzdzrzhsh',"{$povertysl.lnzdzrzhsh}");</script>
+    <th><input name="lnzdzrzhcd" type="radio" value="是" /> 是
+            <input name="lnzdzrzhcd" type="radio" value="否" /> 否</th><script>initradio('lnzdzrzhcd',"{$povertysl.lnzdzrzhcd}");</script>
+    <td><input id="lnzdzrzhbz" type="text" name="lnzdzrzhbz" style="width:100px" value={$povertysl.lnzdzrzhbz} ></td>
+  </tr>
+    <tr>
+    <th>家庭遭重大突发意外事件（不含自然灾害）（一年以上两年以内） </th>
+    <td>B</td>
+    <th>相关证明</th>
+    <td>相关证明</td>
+    <th><input name="lnzdtfsjfh" type="radio" value="是" /> 是
+            <input name="lnzdtfsjfh" type="radio" value="否" /> 否</th><script>initradio('lnzdtfsjfh',"{$povertysl.lnzdtfsjfh}");</script>
+    <td><input name="lnzdtfsjsh" type="radio" value="是" /> 是
+            <input name="lnzdtfsjsh" type="radio" value="否" /> 否</td><script>initradio('lnzdtfsjsh',"{$povertysl.lnzdtfsjsh}");</script>
+    <th><input name="lnzdtfsjcd" type="radio" value="是" /> 是
+            <input name="lnzdtfsjcd" type="radio" value="否" /> 否</th><script>initradio('lnzdtfsjcd',"{$povertysl.lnzdtfsjcd}");</script>
+    <td><input id="lnzdtfsjbz" type="text" name="lnzdtfsjbz" style="width:100px" value={$povertysl.lnzdtfsjbz} ></td>
+  </tr>
+    <tr>
+    <th>父亲为残疾人（一级残疾） </th>
+    <td>C</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="fqyjcjfh" type="radio" value="是" /> 是
+            <input name="fqyjcjfh" type="radio" value="否" /> 否</th><script>initradio('fqyjcjfh',"{$povertysl.fqyjcjfh}");</script>
+    <td><input name="fqyjcjsh" type="radio" value="是" /> 是
+            <input name="fqyjcjsh" type="radio" value="否" /> 否</td><script>initradio('fqyjcjsh',"{$povertysl.fqyjcjsh}");</script>
+    <th><input name="fqyjcjcd" type="radio" value="是" /> 是
+            <input name="fqyjcjcd" type="radio" value="否" /> 否</th><script>initradio('fqyjcjcd',"{$povertysl.fqyjcjcd}");</script>
+    <td><input id="fqyjcjbz" type="text" name="fqyjcjbz" style="width:100px" value={$povertysl.fqyjcjbz} ></td>
+  </tr>
+    <tr>
+    <th>父亲为残疾人（二级残疾） </th>
+    <td>F</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="fqejcjfh" type="radio" value="是" /> 是
+            <input name="fqejcjfh" type="radio" value="否" /> 否</th><script>initradio('fqejcjfh',"{$povertysl.fqejcjfh}");</script>
+    <td><input name="fqejcjsh" type="radio" value="是" /> 是
+            <input name="fqejcjsh" type="radio" value="否" /> 否</td><script>initradio('fqejcjsh',"{$povertysl.fqejcjsh}");</script>
+    <th><input name="fqejcjcd" type="radio" value="是" /> 是
+            <input name="fqejcjcd" type="radio" value="否" /> 否</th><script>initradio('fqejcjcd',"{$povertysl.fqejcjcd}");</script>
+    <td><input id="fqejcjbz" type="text" name="fqejcjbz" style="width:100px" value={$povertysl.fqejcjbz} ></td>
+  </tr>
+    <tr>
+    <th>父亲为残疾人（三级残疾） </th>
+    <td>G</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="fqxjcjfh" type="radio" value="是" /> 是
+            <input name="fqxjcjfh" type="radio" value="否" /> 否</th><script>initradio('fqxjcjfh',"{$povertysl.fqxjcjfh}");</script>
+    <td><input name="fqxjcjsh" type="radio" value="是" /> 是
+            <input name="fqxjcjsh" type="radio" value="否" /> 否</td><script>initradio('fqxjcjsh',"{$povertysl.fqxjcjsh}");</script>
+    <th><input name="fqxjcjcd" type="radio" value="是" /> 是
+            <input name="fqxjcjcd" type="radio" value="否" /> 否</th><script>initradio('fqxjcjcd',"{$povertysl.fqxjcjcd}");</script>
+    <td><input id="fqxjcjbz" type="text" name="fqxjcjbz" style="width:100px" value={$povertysl.fqxjcjbz} ></td>
+  </tr>
+    <tr>
+    <th>父亲为残疾人（四级残疾） </th>
+    <td>G</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="fqsjcjfh" type="radio" value="是" /> 是
+            <input name="fqsjcjfh" type="radio" value="否" /> 否</th><script>initradio('fqsjcjfh',"{$povertysl.fqsjcjfh}");</script>
+    <td><input name="fqsjcjsh" type="radio" value="是" /> 是
+            <input name="fqsjcjsh" type="radio" value="否" /> 否</td><script>initradio('fqsjcjsh',"{$povertysl.fqsjcjsh}");</script>
+    <th><input name="fqsjcjcd" type="radio" value="是" /> 是
+            <input name="fqsjcjcd" type="radio" value="否" /> 否</th><script>initradio('fqsjcjcd',"{$povertysl.fqsjcjcd}");</script>
+    <td><input id="fqsjcjbz" type="text" name="fqsjcjbz" style="width:100px" value={$povertysl.fqsjcjbz} ></td>
+  </tr>
+    <tr>
+    <th>母亲为残疾人（一级残疾） </th>
+    <td>C</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="mqyjcjfh" type="radio" value="是" /> 是
+            <input name="mqyjcjfh" type="radio" value="否" /> 否</th><script>initradio('mqyjcjfh',"{$povertysl.mqyjcjfh}");</script>
+    <td><input name="mqyjcjsh" type="radio" value="是" /> 是
+            <input name="mqyjcjsh" type="radio" value="否" /> 否</td><script>initradio('mqyjcjsh',"{$povertysl.mqyjcjsh}");</script>
+    <th><input name="mqyjcjcd" type="radio" value="是" /> 是
+            <input name="mqyjcjcd" type="radio" value="否" /> 否</th><script>initradio('mqyjcjcd',"{$povertysl.mqyjcjcd}");</script>
+    <td><input id="mqyjcjbz" type="text" name="mqyjcjbz" style="width:100px" value={$povertysl.mqyjcjbz} ></td>
+  </tr>
+    <tr>
+    <th>母亲为残疾人（二级残疾） </th>
+    <td>F</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="mqejcjfh" type="radio" value="是" /> 是
+            <input name="mqejcjfh" type="radio" value="否" /> 否</th><script>initradio('mqejcjfh',"{$povertysl.mqejcjfh}");</script>
+    <td><input name="mqejcjsh" type="radio" value="是" /> 是
+            <input name="mqejcjsh" type="radio" value="否" /> 否</td><script>initradio('mqejcjsh',"{$povertysl.mqejcjsh}");</script>
+    <th><input name="mqejcjcd" type="radio" value="是" /> 是
+            <input name="mqejcjcd" type="radio" value="否" /> 否</th><script>initradio('mqejcjcd',"{$povertysl.mqejcjcd}");</script>
+    <td><input id="mqejcjbz" type="text" name="mqejcjbz" style="width:100px" value={$povertysl.mqejcjbz} ></td>
+  </tr>
+    <tr>
+    <th>母亲为残疾人（三级残疾） </th>
+    <td>G</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="mqxjcjfh" type="radio" value="是" /> 是
+            <input name="mqxjcjfh" type="radio" value="否" /> 否</th><script>initradio('mqxjcjfh',"{$povertysl.mqxjcjfh}");</script>
+    <td><input name="mqxjcjsh" type="radio" value="是" /> 是
+            <input name="mqxjcjsh" type="radio" value="否" /> 否</td><script>initradio('mqxjcjsh',"{$povertysl.mqxjcjsh}");</script>
+    <th><input name="mqxjcjcd" type="radio" value="是" /> 是
+            <input name="mqxjcjcd" type="radio" value="否" /> 否</th><script>initradio('mqxjcjcd',"{$povertysl.mqxjcjcd}");</script>
+    <td><input id="mqxjcjbz" type="text" name="mqxjcjbz" style="width:100px" value={$povertysl.mqxjcjbz} ></td>
+  </tr>
+    <tr>
+    <th>母亲为残疾人（四级残疾） </th>
+    <td>G</td>
+    <th>残疾人证、户口簿</th>
+    <td>残疾人证、户口簿</td>
+    <th><input name="mqsjcjfh" type="radio" value="是" /> 是
+            <input name="mqsjcjfh" type="radio" value="否" /> 否</th><script>initradio('mqsjcjfh',"{$povertysl.mqsjcjfh}");</script>
+    <td><input name="mqsjcjsh" type="radio" value="是" /> 是
+            <input name="mqsjcjsh" type="radio" value="否" /> 否</td><script>initradio('mqsjcjsh',"{$povertysl.mqsjcjsh}");</script>
+    <th><input name="mqsjcjcd" type="radio" value="是" /> 是
+            <input name="mqsjcjcd" type="radio" value="否" /> 否</th><script>initradio('mqsjcjcd',"{$povertysl.mqsjcjcd}");</script>
+    <td><input id="mqsjcjbz" type="text" name="mqsjcjbz" style="width:100px" value={$povertysl.mqsjcjbz} ></td>
+  </tr>
+    <tr>
+    <th>父母均没有工作（不含农村种植户或养殖户） </th>
+    <td>D</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="fmjmygzfh" type="radio" value="是" /> 是
+            <input name="fmjmygzfh" type="radio" value="否" /> 否</th><script>initradio('fmjmygzfh',"{$povertysl.fmjmygzfh}");</script>
+    <td><input name="fmjmygzsh" type="radio" value="是" /> 是
+            <input name="fmjmygzsh" type="radio" value="否" /> 否</td><script>initradio('fmjmygzsh',"{$povertysl.fmjmygzsh}");</script>
+    <th><input name="fmjmygzcd" type="radio" value="是" /> 是
+            <input name="fmjmygzcd" type="radio" value="否" /> 否</th><script>initradio('fmjmygzcd',"{$povertysl.fmjmygzcd}");</script>
+    <td><input id="fmjmygzbz" type="text" name="fmjmygzbz" style="width:100px" value={$povertysl.fmjmygzbz} ></td>
+  </tr>
+    <tr>
+    <th>父母一方没有工作（不含农村种植户或养殖户） </th>
+    <td>F</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="fmyfmygzfh" type="radio" value="是" /> 是
+            <input name="fmyfmygzfh" type="radio" value="否" /> 否</th><script>initradio('fmyfmygzfh',"{$povertysl.fmyfmygzfh}");</script>
+    <td><input name="fmyfmygzsh" type="radio" value="是" /> 是
+            <input name="fmyfmygzsh" type="radio" value="否" /> 否</td><script>initradio('fmyfmygzsh',"{$povertysl.fmyfmygzsh}");</script>
+    <th><input name="fmyfmygzcd" type="radio" value="是" /> 是
+            <input name="fmyfmygzcd" type="radio" value="否" /> 否</th><script>initradio('fmyfmygzcd',"{$povertysl.fmyfmygzcd}");</script>
+    <td><input id="fmyfmygzbz" type="text" name="fmyfmygzbz" style="width:100px" value={$povertysl.fmyfmygzbz} ></td>
+  </tr>
+    <tr>
+    <th>农村个体小型种植户或个体小型养殖户（或两者均是） </th>
+    <td>G</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="ncgtxxzzhfh" type="radio" value="是" /> 是
+            <input name="ncgtxxzzhfh" type="radio" value="否" /> 否</th><script>initradio('ncgtxxzzhfh',"{$povertysl.ncgtxxzzhfh}");</script>
+    <td><input name="ncgtxxzzhsh" type="radio" value="是" /> 是
+            <input name="ncgtxxzzhsh" type="radio" value="否" /> 否</td><script>initradio('ncgtxxzzhsh',"{$povertysl.ncgtxxzzhsh}");</script>
+    <th><input name="ncgtxxzzhcd" type="radio" value="是" /> 是
+            <input name="ncgtxxzzhcd" type="radio" value="否" /> 否</th><script>initradio('ncgtxxzzhcd',"{$povertysl.ncgtxxzzhcd}");</script>
+    <td><input id="ncgtxxzzhbz" type="text" name="ncgtxxzzhbz" style="width:100px" value={$povertysl.ncgtxxzzhbz} ></td>
+  </tr>
+    <tr>
+    <th>父母一方抚养 </th>
+    <td>F</td>
+    <th>相关证明户口簿</th>
+    <td>相关证明户口簿</td>
+    <th><input name="fmyffyfh" type="radio" value="是" /> 是
+            <input name="fmyffyfh" type="radio" value="否" /> 否</th><script>initradio('fmyffyfh',"{$povertysl.fmyffyfh}");</script>
+    <td><input name="fmyffysh" type="radio" value="是" /> 是
+            <input name="fmyffysh" type="radio" value="否" /> 否</td><script>initradio('fmyffysh',"{$povertysl.fmyffysh}");</script>
+    <th><input name="fmyffycd" type="radio" value="是" /> 是
+            <input name="fmyffycd" type="radio" value="否" /> 否</th><script>initradio('fmyffycd',"{$povertysl.fmyffycd}");</script>
+    <td><input id="fmyffybz" type="text" name="fmyffybz" style="width:100px" value={$povertysl.fmyffybz} ></td>
+  </tr>
+    <tr>
+    <th>家庭在学人数（2人（含本人）以上在上学） </th>
+    <td>F</td>
+    <th>户口簿、学生证</th>
+    <td>户口簿、学生证</td>
+    <th><input name="jtzxrsfh" type="radio" value="是" /> 是
+            <input name="jtzxrsfh" type="radio" value="否" /> 否</th><script>initradio('jtzxrsfh',"{$povertysl.jtzxrsfh}");</script>
+    <td><input name="jtzxrssh" type="radio" value="是" /> 是
+            <input name="jtzxrssh" type="radio" value="否" /> 否</td><script>initradio('jtzxrssh',"{$povertysl.jtzxrssh}");</script>
+    <th><input name="jtzxrscd" type="radio" value="是" /> 是
+            <input name="jtzxrscd" type="radio" value="否" /> 否</th><script>initradio('jtzxrscd',"{$povertysl.jtzxrscd}");</script>
+    <td><input id="jtzxrsbz" type="text" name="jtzxrsbz" style="width:100px" value={$povertysl.jtzxrsbz} ></td>
+  </tr>
+    <tr>
+    <th>父母年龄（父母均为60周岁以上（含60周岁）） </th>
+    <td>F</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="fmjwlssysfh" type="radio" value="是" /> 是
+            <input name="fmjwlssysfh" type="radio" value="否" /> 否</th><script>initradio('fmjwlssysfh',"{$povertysl.fmjwlssysfh}");</script>
+    <td><input name="fmjwlssyssh" type="radio" value="是" /> 是
+            <input name="fmjwlssyssh" type="radio" value="否" /> 否</td><script>initradio('fmjwlssyssh',"{$povertysl.fmjwlssyssh}");</script>
+    <th><input name="fmjwlssyscd" type="radio" value="是" /> 是
+            <input name="fmjwlssyscd" type="radio" value="否" /> 否</th><script>initradio('fmjwlssyscd',"{$povertysl.fmjwlssyscd}");</script>
+    <td><input id="fmjwlssysbz" type="text" name="fmjwlssysbz" style="width:100px" value={$povertysl.fmjwlssysbz} ></td>
+  </tr>
+    <tr>
+    <th>父母年龄 （父母一方为60周岁以上（含60周岁））</th>
+    <td>F</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="fmyfwlszsysfh" type="radio" value="是" /> 是
+            <input name="fmyfwlszsysfh" type="radio" value="否" /> 否</th><script>initradio('fmyfwlszsysfh',"{$povertysl.fmyfwlszsysfh}");</script>
+    <td><input name="fmyfwlszsyssh" type="radio" value="是" /> 是
+            <input name="fmyfwlszsyssh" type="radio" value="否" /> 否</td><script>initradio('fmyfwlszsyssh',"{$povertysl.fmyfwlszsyssh}");</script>
+    <th><input name="fmyfwlszsyscd" type="radio" value="是" /> 是
+            <input name="fmyfwlszsyscd" type="radio" value="否" /> 否</th><script>initradio('fmyfwlszsyscd',"{$povertysl.fmyfwlszsyscd}");</script>
+    <td><input id="fmyfwlszsysbz" type="text" name="fmyfwlszsysbz" style="width:100px" value={$povertysl.fmyfwlszsysbz} ></td>
+  </tr>
+    <tr>
+    <th>赡养老人 （赡养两位以上老人（70周岁以上））</th>
+    <td>F</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="sylrysfh" type="radio" value="是" /> 是
+            <input name="sylrysfh" type="radio" value="否" /> 否</th><script>initradio('sylrysfh',"{$povertysl.sylrysfh}");</script>
+    <td><input name="sylryssh" type="radio" value="是" /> 是
+            <input name="sylryssh" type="radio" value="否" /> 否</td><script>initradio('sylryssh',"{$povertysl.sylryssh}");</script>
+    <th><input name="sylryscd" type="radio" value="是" /> 是
+            <input name="sylryscd" type="radio" value="否" /> 否</th><script>initradio('sylryscd',"{$povertysl.sylryscd}");</script>
+    <td><input id="sylrysbz" type="text" name="sylrysbz" style="width:100px" value={$povertysl.sylrysbz} ></td>
+  </tr>
+    <tr>
+    <th>赡养老人 （赡养两位（含两位）及以下老人（70周岁以上）） </th>
+    <td>F</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="sylryxfh" type="radio" value="是" /> 是
+            <input name="sylryxfh" type="radio" value="否" /> 否</th><script>initradio('sylryxfh',"{$povertysl.sylryxfh}");</script>
+    <td><input name="sylryxsh" type="radio" value="是" /> 是
+            <input name="sylryxsh" type="radio" value="否" /> 否</td><script>initradio('sylryxsh',"{$povertysl.sylryxsh}");</script>
+    <th><input name="sylryxcd" type="radio" value="是" /> 是
+            <input name="sylryxcd" type="radio" value="否" /> 否</th><script>initradio('sylryxcd',"{$povertysl.sylryxcd}");</script>
+    <td><input id="sylryxbz" type="text" name="sylryxbz" style="width:100px" value={$povertysl.sylryxbz} ></td>
+  </tr>
+    <tr>
+    <th>家庭人均年收入 （就读学校所在地最低生活保障线下）</th>
+    <td>F</td>
+    <th>相关证明、户口簿</th>
+    <td>相关证明、户口簿</td>
+    <th><input name="zdshbzxxfh" type="radio" value="是" /> 是
+            <input name="zdshbzxxfh" type="radio" value="否" /> 否</th><script>initradio('zdshbzxxfh',"{$povertysl.zdshbzxxfh}");</script>
+    <td><input name="zdshbzxxsh" type="radio" value="是" /> 是
+            <input name="zdshbzxxsh" type="radio" value="否" /> 否</td><script>initradio('zdshbzxxsh',"{$povertysl.zdshbzxxsh}");</script>
+    <th><input name="zdshbzxxcd" type="radio" value="是" /> 是
+            <input name="zdshbzxxcd" type="radio" value="否" /> 否</th><script>initradio('zdshbzxxcd',"{$povertysl.zdshbzxxcd}");</script>
+    <td><input id="zdshbzxxbz" type="text" name="zdshbzxxbz" style="width:100px" value={$povertysl.zdshbzxxbz} ></td>
+  </tr>
+    <tr>
+    <th>家庭人均年收入 （就读学校所在地最低生活保障线上2倍以内） </th>
+    <td>G</td>
+    <th>相关证明、户口簿</th>
+    <td>相关证明、户口簿</td>
+    <th><input name="zdshbzxsfh" type="radio" value="是" /> 是
+            <input name="zdshbzxsfh" type="radio" value="否" /> 否</th><script>initradio('zdshbzxsfh',"{$povertysl.zdshbzxsfh}");</script>
+    <td><input name="zdshbzxssh" type="radio" value="是" /> 是
+            <input name="zdshbzxssh" type="radio" value="否" /> 否</td><script>initradio('zdshbzxssh',"{$povertysl.zdshbzxssh}");</script>
+    <th><input name="zdshbzxscd" type="radio" value="是" /> 是
+            <input name="zdshbzxscd" type="radio" value="否" /> 否</th><script>initradio('zdshbzxscd',"{$povertysl.zdshbzxscd}");</script>
+    <td><input id="zdshbzxsbz" type="text" name="zdshbzxsbz" style="width:100px" value={$povertysl.zdshbzxsbz} ></td>
+  </tr>
+    <tr>
+    <th>父母文化（父母均为初中及以下文化程度） </th>
+    <td>G</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="fmjwczyxfh" type="radio" value="是" /> 是
+            <input name="fmjwczyxfh" type="radio" value="否" /> 否</th><script>initradio('fmjwczyxfh',"{$povertysl.fmjwczyxfh}");</script>
+    <td><input name="fmjwczyxsh" type="radio" value="是" /> 是
+            <input name="fmjwczyxsh" type="radio" value="否" /> 否</td><script>initradio('fmjwczyxsh',"{$povertysl.fmjwczyxsh}");</script>
+    <th><input name="fmjwczyxcd" type="radio" value="是" /> 是
+            <input name="fmjwczyxcd" type="radio" value="否" /> 否</th><script>initradio('fmjwczyxcd',"{$povertysl.fmjwczyxcd}");</script>
+    <td><input id="fmjwczyxbz" type="text" name="fmjwczyxbz" style="width:100px" value={$povertysl.fmjwczyxbz} ></td>
+  </tr>
+    <tr>
+    <th>父母文化（父母一方为初中及以下文化程度） </th>
+    <td>G</td>
+    <th>户口簿、相关证明</th>
+    <td>户口簿、相关证明</td>
+    <th><input name="fmyfwczyxfh" type="radio" value="是" /> 是
+            <input name="fmyfwczyxfh" type="radio" value="否" /> 否</th><script>initradio('fmyfwczyxfh',"{$povertysl.fmyfwczyxfh}");</script>
+    <td><input name="fmyfwczyxsh" type="radio" value="是" /> 是
+            <input name="fmyfwczyxsh" type="radio" value="否" /> 否</td><script>initradio('fmyfwczyxsh',"{$povertysl.fmyfwczyxsh}");</script>
+    <th><input name="fmyfwczyxcd" type="radio" value="是" /> 是
+            <input name="fmyfwczyxcd" type="radio" value="否" /> 否</th><script>initradio('fmyfwczyxcd',"{$povertysl.fmyfwczyxcd}");</script>
+    <td><input id="fmyfwczyxbz" type="text" name="fmyfwczyxbz" style="width:100px" value={$povertysl.fmyfwczyxbz} ></td>
+  </tr>
+    <tr>
+    <th>户籍所在地 （国家核定的680个贫困县（区））</th>
+    <td>G</td>
+    <th>户口簿</th>
+    <td>户口簿</td>
+    <th><input name="gjhdpkqfh" type="radio" value="是" /> 是
+            <input name="gjhdpkqfh" type="radio" value="否" /> 否</th><script>initradio('gjhdpkqfh',"{$povertysl.gjhdpkqfh}");</script>
+    <td><input name="gjhdpkqsh" type="radio" value="是" /> 是
+            <input name="gjhdpkqsh" type="radio" value="否" /> 否</td><script>initradio('gjhdpkqsh',"{$povertysl.gjhdpkqsh}");</script>
+    <th><input name="gjhdpkqcd" type="radio" value="是" /> 是
+            <input name="gjhdpkqcd" type="radio" value="否" /> 否</th><script>initradio('gjhdpkqcd',"{$povertysl.gjhdpkqcd}");</script>
+    <td><input id="gjhdpkqbz" type="text" name="gjhdpkqbz" style="width:100px" value={$povertysl.gjhdpkqbz} ></td>
+  </tr>
+    <tr>
+    <th>户籍所在地（680个贫困县以外的革命老区（含中央苏区）） </th>
+    <td>G</td>
+    <th>户口簿</th>
+    <td>户口簿</td>
+    <th><input name="gmlqfh" type="radio" value="是" /> 是
+            <input name="gmlqfh" type="radio" value="否" /> 否</th><script>initradio('gmlqfh',"{$povertysl.gmlqfh}");</script>
+    <td><input name="gmlqsh" type="radio" value="是" /> 是
+            <input name="gmlqsh" type="radio" value="否" /> 否</td><script>initradio('gmlqsh',"{$povertysl.gmlqsh}");</script>
+    <th><input name="gmlqcd" type="radio" value="是" /> 是
+            <input name="gmlqcd" type="radio" value="否" /> 否</th><script>initradio('gmlqcd',"{$povertysl.gmlqcd}");</script>
+    <td><input id="gmlqbz" type="text" name="gmlqbz" style="width:100px" value={$povertysl.gmlqbz} ></td>
+  </tr>
+    <tr>
+    <th>户籍所在地（广东省扶贫开发重点县（不含革命老区）） </th>
+    <td>G</td>
+    <th>户口簿</th>
+    <td>户口簿</td>
+    <th><input name="hjszdfh" type="radio" value="是" /> 是
+            <input name="hjszdfh" type="radio" value="否" /> 否</th><script>initradio('hjszdfh',"{$povertysl.hjszdfh}");</script>
+    <td><input name="hjszdsh" type="radio" value="是" /> 是
+            <input name="hjszdsh" type="radio" value="否" /> 否</td><script>initradio('hjszdsh',"{$povertysl.hjszdsh}");</script>
+    <th><input name="hjszdcd" type="radio" value="是" /> 是
+            <input name="hjszdcd" type="radio" value="否" /> 否</th><script>initradio('hjszdcd',"{$povertysl.hjszdcd}");</script>
+    <td><input id="hjszdbz" type="text" name="hjszdbz" style="width:100px" value={$povertysl.hjszdbz} ></td>
+  </tr>
+    <tr>
+    <th>户籍性质 （农村户籍）</th>
+    <td>G</td>
+    <th>户口簿</th>
+    <td>户口簿</td>
+    <th><input name="hjxzfh" type="radio" value="是" /> 是
+            <input name="hjxzfh" type="radio" value="否" /> 否</th><script>initradio('hjxzfh',"{$povertysl.hjxzfh}");</script>
+    <td><input name="hjxzsh" type="radio" value="是" /> 是
+            <input name="hjxzsh" type="radio" value="否" /> 否</td><script>initradio('hjxzsh',"{$povertysl.hjxzsh}");</script>
+    <th><input name="hjxzcd" type="radio" value="是" /> 是
+            <input name="hjxzcd" type="radio" value="否" /> 否</th><script>initradio('hjxzcd',"{$povertysl.hjxzcd}");</script>
+    <td><input id="hjxzbz" type="text" name="hjxzbz" style="width:100px" value={$povertysl.hjxzbz} ></td>
+  </tr>
+    <tr>
+    <th>民族（少数民族） </th>
+    <td>G</td>
+    <th>户口簿</th>
+    <td>户口簿</td>
+    <th><input name="mzssmzfh" type="radio" value="是" /> 是
+            <input name="mzssmzfh" type="radio" value="否" /> 否</th><script>initradio('mzssmzfh',"{$povertysl.mzssmzfh}");</script>
+    <td><input name="mzssmzsh" type="radio" value="是" /> 是
+            <input name="mzssmzsh" type="radio" value="否" /> 否</td><script>initradio('mzssmzsh',"{$povertysl.mzssmzsh}");</script>
+    <th><input name="mzssmzcd" type="radio" value="是" /> 是
+            <input name="mzssmzcd" type="radio" value="否" /> 否</th><script>initradio('mzssmzcd',"{$povertysl.mzssmzcd}");</script>
+    <td><input id="mzssmzbz" type="text" name="mzssmzbz" style="width:100px" value={$povertysl.mzssmzbz} ></td>
+  </tr>
+    <tr>
+    <th>学费、住宿费（学费、住宿费在9501元至20000元） </th>
+    <td>G</td>
+    <th> </th>
+    <td> </td>
+    <th><input name="xfzsf1fh" type="radio" value="是" /> 是
+            <input name="xfzsf1fh" type="radio" value="否" /> 否</th><script>initradio('xfzsf1fh',"{$povertysl.xfzsf1fh}");</script>
+    <td><input name="xfzsf1sh" type="radio" value="是" /> 是
+            <input name="xfzsf1sh" type="radio" value="否" /> 否</td><script>initradio('xfzsf1sh',"{$povertysl.xfzsf1sh}");</script>
+    <th><input name="xfzsf1cd" type="radio" value="是" /> 是
+            <input name="xfzsf1cd" type="radio" value="否" /> 否</th><script>initradio('xfzsf1cd',"{$povertysl.xfzsf1cd}");</script>
+    <td><input id="xfzsf1bz" type="text" name="xfzsf1bz" style="width:100px" value={$povertysl.xfzsf1bz} ></td>
+  </tr>
+    <tr>
+    <th>学费、住宿费（学费、住宿费在20001元以上（仅对高校学生））</th>
+    <td>G</td>
+    <th> </th>
+    <td> </td>
+    <th><input name="xfzsf2fh" type="radio" value="是" /> 是
+            <input name="xfzsf2fh" type="radio" value="否" /> 否</th><script>initradio('xfzsf2fh',"{$povertysl.xfzsf2fh}");</script>
+    <td><input name="xfzsf2sh" type="radio" value="是" /> 是
+            <input name="xfzsf2sh" type="radio" value="否" /> 否</td><script>initradio('xfzsf2sh',"{$povertysl.xfzsf2sh}");</script>
+    <th><input name="xfzsf2cd" type="radio" value="是" /> 是
+            <input name="xfzsf2cd" type="radio" value="否" /> 否</th><script>initradio('xfzsf2cd',"{$povertysl.xfzsf2cd}");</script>
+    <td><input id="xfzsf2bz" type="text" name="xfzsf2bz" style="width:100px" value={$povertysl.xfzsf2bz} ></td>
+  </tr>
+    <tr>
+    <th>家庭资产（无房产无汽车户） </th>
+    <td>G</td>
+    <th>相关证明、户口簿</th>
+    <td>相关证明、户口簿</td>
+    <th><input name="jtzcfh" type="radio" value="是" /> 是
+            <input name="jtzcfh" type="radio" value="否" /> 否</th><script>initradio('jtzcfh',"{$povertysl.jtzcfh}");</script>
+    <td><input name="jtzcsh" type="radio" value="是" /> 是
+            <input name="jtzcsh" type="radio" value="否" /> 否</td><script>initradio('jtzcsh',"{$povertysl.jtzcsh}");</script>
+    <th><input name="jtzccd" type="radio" value="是" /> 是
+            <input name="jtzccd" type="radio" value="否" /> 否</th><script>initradio('jtzccd',"{$povertysl.jtzccd}");</script>
+    <td><input id="jtzcbz" type="text" name="jtzcbz" style="width:100px" value={$povertysl.jtzcbz} ></td>
+  </tr>
+</table>
+</br>
+        <div id='submit'  align = "center" >
+        <button type="submit" >提交</button><br/><br/>
+        </div>
+  </from>
+</body>
+</html>

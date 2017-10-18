@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+<title>五邑大学优秀三好学生登记表</title>
+</head>
+<body id="page">
+<form method="post"  action="postdate" onSubmit="return checktext('Wyumeritstudent')" >
+<h2>基本情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>学院</th>
+    <td><input id="xueyuan" type="text" name="xueyuan" style="width:100px" /></td>
+  </tr>
+  <tr>
+    <th>班级</th>
+    <td><input id="banji" type="text" name="banji" style="width:100px" /></td>
+  </tr>
+  <tr>
+    <th>时间（例2017-09-01）</th>
+    <td><input id="years" type="text" name="years" style="width:100px" />-<input id="months" type="text" name="months" style="width:100px" />-<input id="days" type="text" name="days" style="width:100px" /></td>
+  </tr>
+  <tr>
+    <th>姓名</th>
+    <td><input id="xingming" type="text" name="xingming" style="width:100px" /></td>
+  </tr>
+  <tr>
+    <th>性别</th>
+    <td><input id="xingming" type="text" name="xingbie" style="width:100px" /></td>
+  </tr>
+  <tr>
+    <th>政治面貌</th>
+    <td><input id="xingming" type="text" name="zzmm" style="width:100px" /></td>
+  </tr>
+  <tr>
+    <th>现任职务</th>
+    <td><input id="xrzw" type="text" name="xrzw" style="width:100px" /></td>
+  </tr>
+  <tr>
+    <th>思想政治表现、政治态度、学习态度、个人品德</th>
+    <td><textarea id="sqly" name="sqly"style="width: 400px; height: 201px;padding: 10px 3px 3px 5px;" placeholder=（150字以上，可以打印出来）></textarea></td>
+  </tr>
+  <tr>
+    <th>学习成绩</th>
+    <td>学生学分绩点在本年级本专业排名第<input id="xxcj" type="text" name="xxcj" style="width:100px" />名</td>
+  </tr>
+   <tr>
+    <th>综合测评</th>
+    <td>综合测评在本年级本专业排名第<input id="xxcj" type="text" name="zhcp" style="width:100px" />名</td>
+  </tr>
+  <tr>
+    <th>奖学金</th>
+    <td>获&nbsp;&nbsp;<input id="jiangxuejin" type="text" name="jiangxuejin" style="width:30px" />&nbsp;&nbsp;等奖学金</td>
+  </tr>
+   <tr>
+    <th>班导师意见</th>
+    <td><textarea id="bdsyj" name="bdsyj"style="width: 400px; height: 201px;padding: 10px 3px 3px 5px;" placeholder=
+（60字以上意见,可以打印出来，班导师需亲笔签名）></textarea></td>
+  </tr>
+</table>
+        <div id='submit'  align = "center" >
+        <button type="submit" >提交</button><br/><br/>
+        </div>
+  </from>
+</body>
+</html>

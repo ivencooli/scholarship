@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+<title>五邑大学优秀学生干部登记表</title>
+</head>
+<body id="page">
+<h2>基本情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>学院</th>
+    <td>{$wyucadre.yuanxi}</td>
+  </tr>
+  <tr>
+    <th>班级</th>
+    <td>{$wyucadre.banji}</td>
+  </tr>
+  <tr>
+    <th>时间（例2017-09-01）</th>
+    <td>{$wyucadre.years}-{$wyucadre.months}-{$wyucadre.days}</td>
+  </tr>
+  <tr>
+    <th>姓名</th>
+    <td>{$wyucadre.xingming}</td>
+  </tr>
+  <tr>
+    <th>性别</th>
+    <td>{$wyucadre.xingbie}</td>
+  </tr>
+  <tr>
+    <th>政治面貌</th>
+    <td>{$wyucadre.zzmm}</td>
+  </tr>
+  <tr>
+    <th>现任职务</th>
+    <td>{$wyucadre.xrzw}</td>
+  </tr>
+  <tr>
+    <th>学习态度、工作态度、个人品德、先进事迹</th>
+    <td>{$wyucadre.sqly}</td>
+  </tr>
+   <tr>
+    <th>班导师意见</th>
+    <td>{$wyucadre.bdsyj}</td>
+  </tr>
+</table>
+<div id="activity" align = "center">
+        <button onclick="window.location='change'">修改</button>
+        <button onclick="window.location='printword'">打印</button>
+</div>
+</body>
+</html>

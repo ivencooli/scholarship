@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+<script type="text/javascript">
+  function canji_y(){
+  document.getElementById('canji1').style.display='block';
+  document.getElementById('canji2').style.display='block';
+}
+
+function canji_n(){
+  document.getElementById('canji1').style.display='none';
+  document.getElementById('canji2').style.display='none';
+  for(i = 0; i < 4; i++){
+    document.getElementsByName("cjlb")[i].value = "";
+    document.getElementsByName("cjdj")[i].value = "";
+  }
+  document.getElementById('cjlbtext').value = "";
+}
+function canji_other(){
+  document.getElementById('cjlbtext').style.display='block';
+}
+function canji_stz(){
+  document.getElementById('cjlbtext').style.display='none';
+  document.getElementById('cjlbtext').value = "";
+}
+
+function zfjq_zzq(){
+  document.getElementById('zfjqtext').style.display='none';
+  document.getElementById('zfjqtext').value = "";
+}
+function zfjq_other(){
+  document.getElementById('zfjqtext').style.display='block';
+}
+</script>
+<title>广东省家庭经济困难学生认定申请表 </title>
+</head>
+<body id="page">
+<form method="post"  action="postdate" onSubmit="return checktext('Poverty')">
+<h2>学生基本情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>学校</th>
+    <td><input id="xuexiao" type="text" name="xuexiao" style="width:300px" value={$poverty.xuexiao}></td>
+  </tr>
+  <tr>
+    <th>年级</th>
+    <td><input id="nianji" type="text" name="nianji" style="width:300px" value={$poverty.nianji}></td>
+  </tr>
+  <tr>
+    <th>班别（专业）</th>
+    <td><input id="T" type="text" name="banbie" style="width:300px" value={$poverty.banbie}></td>
+  </tr>
+  <tr>
+    <th>院（系）</th>
+    <td><input id="yuanxi" type="text" name="yuanxi" style="width:300px" value={$poverty.yuanxi}></td>
+  </tr>
+  <tr>
+    <th>宿舍</th>
+    <td><input id="sushe" type="text" name="sushe" style="width:300px" value={$poverty.sushe}></td>
+  </tr>
+  <tr>
+    <th>学（籍）号</th>
+    <td><input id="xuejihao" type="text" name="xuejihao" style="width:300px" value={$poverty.xuejihao}></td>
+  </tr>
+   <tr>
+    <th>姓名</th>
+    <td><input id="xingming" type="text" name="xingming" style="width:300px" value={$poverty.xingming}></td>
+  </tr>
+  <tr>
+    <th>性别</th>
+    <td><input id="xingbie" type="text" name="xingbie" style="width:300px" value={$poverty.xingbie}></td>
+  </tr>
+  <tr>
+    <th>民族（要写族，如汉族）</th>
+    <td><input id="minzu" type="text" name="minzu" style="width:300px" value={$poverty.minzu}></td>
+  </tr>
+  <tr>
+    <th>出生年月</th>
+    <td><input id="csny" type="text" name="csny" style="width:300px" value={$poverty.csny}></td>
+  </tr>
+  <tr>
+    <th>身份证号</th>
+    <td><input id="sfzh" type="text" name="sfzh" style="width:300px" value={$poverty.sfzh}></td>
+  </tr>
+  <tr>
+    <th>户口（转入学校户口的学生填写入学前户口）</th>
+    <td><input name="hukou" type="radio" value="城镇" /> 城镇
+            <input name="hukou" type="radio" value="农村" /> 农村</td>
+            <script>initradio('hukou',"{$poverty.hukou}");</script>
+  </tr>
+   <tr>
+    <th>家庭人口数</th>
+    <td><input id="jtrks" type="text" name="jtrks" style="width:300px" value={$poverty.jtrks}></td>
+  </tr>
+    <tr>
+    <th>家庭成员在学人数</th>
+    <td><input id="zxrs" type="text" name="zxrs" style="width:300px" value={$poverty.zxrs}></td>
+  </tr>
+   <tr>
+    <th>建档立卡户</th>
+    <td><input name="jdlkh" type="radio" value="是" /> 是
+            <input name="jdlkh" type="radio" value="否" /> 否</td>
+            <script>initradio('jdlkh',"{$poverty.jdlkh}");</script>
+  </tr>
+       <tr>
+    <th>特困供养人员</th>
+    <td><input name="gyry" type="radio" value="是" /> 是
+            <input name="gyry" type="radio" value="否" /> 否</td>
+            <script>initradio('gyry',"{$poverty.gyry}");</script>
+  </tr>
+     <tr>
+    <th>城乡最低生活保障户</th>
+    <td><input name="shbzh" type="radio" value="是" /> 是
+            <input name="shbzh" type="radio" value="否" /> 否</td>
+            <script>initradio('shbzh',"{$poverty.shbzh}");</script>
+  </tr>
+     <tr>
+    <th>特困职工子女</th>
+    <td><input name="zgzn" type="radio" value="是" /> 是
+            <input name="zgzn" type="radio" value="否" /> 否</td>
+            <script>initradio('zgzn',"{$poverty.zgzn}");</script>
+  </tr>
+     <tr>
+    <th>城镇低收入困难家庭</th>
+    <td><input name="knjt" type="radio" value="是" /> 是
+            <input name="knjt" type="radio" value="否" /> 否</td>
+            <script>initradio('knjt',"{$poverty.knjt}");</script>
+  </tr>
+     <tr>
+    <th>孤儿</th>
+    <td><input name="guer" type="radio" value="是" /> 是
+            <input name="guer" type="radio" value="否" /> 否</td>
+            <script>initradio('guer',"{$poverty.guer}");</script>
+  </tr>
+     <tr>
+    <th>父母一方抚养</th>
+    <td><input name="yffy" type="radio" value="是" /> 是
+            <input name="yffy" type="radio" value="否" /> 否</td>
+            <script>initradio('yffy',"{$poverty.yffy}");</script>
+  </tr>
+     <tr>
+    <th>烈士子女、因公牺牲军人警察子女</th>
+    <td><input name="lszn" type="radio" value="是" /> 是
+            <input name="lszn" type="radio" value="否" /> 否</td>
+            <script>initradio('lszn',"{$poverty.lszn}");</script>
+  </tr>
+     <tr>
+    <th>残疾</th>
+    <td><input name="canji" type="radio" value="是" onclick="canji_y()"/> 是
+            <input name="canji" type="radio" value="否" onclick="canji_n()"/> 否</td>
+            <script>initradio('canji',"{$poverty.canji}");</script>
+  </tr>
+     <tr>
+    <th>患重大疾病</th>
+    <td><input name="hzdjb" type="radio" value="是" /> 是
+            <input name="hzdjb" type="radio" value="否" /> 否</td>
+            <script>initradio('hzdjb',"{$poverty.hzdjb}");</script>
+  </tr>
+     <tr id="canji1" style="display:block;">
+    <th>如是残疾，请选择类别：</th>
+    <td> <input id="cjlb1" name="cjlb" type="radio" value="视残"  onclick="canji_stz()"/> 视残
+            <input id="cjlb2" name="cjlb" type="radio" value="听残"  onclick="canji_stz()"/> 听残
+            <input id="cjlb3" name="cjlb" type="radio" value="智残"  onclick="canji_stz()"/> 智残
+            <input id="cjlb4" name="cjlb" type="radio" value="其他" onclick="canji_other()"/> 其他：</td>
+      <td><input id="cjlbtext" style="display:block;" type="text" name="cjlbtext" style="width:300px" value={$poverty.cjlbtext}></td>
+            <script>initradio('cjlb',"{$poverty.cjlb}");</script>
+  </tr>
+     <tr id="canji2" style="display:block;">
+    <th>如是残疾，请选择等级：</th>
+    <td> <input id="cjdj1" name="cjdj" type="radio" value="一级" /> 一级
+            <input id="cjdj2" name="cjdj" type="radio" value="二级" /> 二级
+            <input id="cjdj3" name="cjdj" type="radio" value="三级" /> 三级
+            <input id="cjdj4" name="cjdj" type="radio" value="四级" /> 四级</td>
+            <script>initradio('cjdj',"{$poverty.cjdj}");</script>
+      </tr>
+  </table>
+
+  <h2>家庭信息</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>户籍地址</th>
+    <td><input id="hjdz" type="text" name="hjdz" style="width:300px" value={$poverty.hjdz}></td>
+  </tr>
+  <tr>
+    <th>邮政编码</th>
+    <td><input id="yzbm" type="text" name="yzbm" style="width:300px" value={$poverty.yzbm}></td>
+  </tr>
+  <tr>
+    <th>联系电话</th>
+    <td><input id="lzdh" type="text" name="lzdh"  style="width:300px" value={$poverty.lzdh}></td>
+  </tr>
+   <tr>
+    <th>家庭人均年收入（人民币元）</th>
+    <td><input id="rjnsr" type="text" name="rjnsr" style="width:300px" value={$poverty.rjnsr}></td>
+  </tr>
+    <tr>
+    <th>住房情况</th>
+    <td> <input id="zfjq1" name="zfjq" type="radio" value="自有" onclick="zfjq_zzq()"/> 自有
+            <input id="zfjq2" name="zfjq" type="radio" value="租赁" onclick="zfjq_zzq()"/> 租赁
+            <input id="zfjq3" name="zfjq" type="radio" value="其他" onclick="zfjq_other()"/> 其他：
+            <input id="zfjqtext" style="display:none;" type="text" name="zfjqtext" style="width:300px" value={$poverty.zfjqtext} ></td>
+            <script>initradio('zfjq',"{$poverty.zfjq}");</script>
+  </tr>
+     <tr>
+    <th>购车情况</th>
+    <td> <input id="gcqk1" name="gcqk" type="radio" value="无车" /> 无车
+            <input id="gcqk2" name="gcqk" type="radio" value="小轿车" /> 小轿车
+            <input id="gcqk3" name="gcqk" type="radio" value="货车" /> 货车
+            <input id="gcqk4" name="gcqk" type="radio" value="农机车" /> 农机车</td>
+            <script>initradio('gcqk',"{$poverty.gcqk}");</script>
+      </tr>
+</table>
+
+<h2>家庭成员情况（直系亲属，含祖父母）</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>家人姓名</th>
+    <th>年龄</th>
+    <th>与学生关系</th>
+    <th>工作（学习）单位</th>
+    <th>联系电话</th>
+    <th>从业情况</th>
+    <th>文化程度</th>
+    <th>年收入（元）</th>
+    <th>健康状况</th>
+  </tr>
+  <tr>
+    <td><input id="jrxm1" type="text" name="jrxm1" style="width:100%" value={$poverty.jrxm1}></td>
+    <td><input id="nianling1" type="text" name="nianling1" style="width:100%" value={$poverty.nianling1}></td>
+    <td><input id="yxsgx1" type="text" name="yxsgx1" style="width:100%" value={$poverty.yxsgx1}></td>
+    <td><input id="gzdw1" type="text" name="gzdw1" style="width:100%" value={$poverty.gzdw1}></td>
+    <td><input id="lxdh1" type="text" name="lxdh1" style="width:100%" value={$poverty.lxdh1}></td>
+    <td><input id="cyqk1" type="text" name="cyqk1" style="width:100%" value={$poverty.cyqk1}></td>
+  <td><input id="whcd1" type="text" name="whcd1" style="width:100%" value={$poverty.whcd1}></td>
+    <td><input id="nianshouru1" type="text" name="nianshouru1" style="width:100%" value={$poverty.nianshouru1}></td>
+    <td><input id="jkzk1" type="text" name="jkzk1" style="width:100%" value={$poverty.jkzk1}></td>
+  </tr>
+  <tr>
+    <td><input id="jrxm2" type="text" name="jrxm2" style="width:100%" value={$poverty.jrxm2}></td>
+    <td><input id="nianling2" type="text" name="nianling2" style="width:100%" value={$poverty.nianling2}></td>
+    <td><input id="yxsgx2" type="text" name="yxsgx2" style="width:100%" value={$poverty.yxsgx2}></td>
+    <td><input id="gzdw2" type="text" name="gzdw2" style="width:100%" value={$poverty.gzdw2}></td>
+    <td><input id="lxdh2" type="text" name="lxdh2" style="width:100%" value={$poverty.lxdh2}></td>
+    <td><input id="cyqk2" type="text" name="cyqk2" style="width:100%" value={$poverty.cyqk2}></td>
+  <td><input id="whcd2" type="text" name="whcd2" style="width:100%" value={$poverty.whcd2}></td>
+    <td><input id="nianshouru2" type="text" name="nianshouru2" style="width:100%" value={$poverty.nianshouru2}></td>
+    <td><input id="jkzk2" type="text" name="jkzk2" style="width:100%" value={$poverty.jkzk2}></td>
+  </tr>
+  <tr>
+    <td><input id="jrxm3" type="text" name="jrxm3" style="width:100%" value={$poverty.jrxm3}></td>
+    <td><input id="nianling3" type="text" name="nianling3" style="width:100%" value={$poverty.nianling3}></td>
+    <td><input id="yxsgx3" type="text" name="yxsgx3" style="width:100%" value={$poverty.yxsgx3}></td>
+    <td><input id="gzdw3" type="text" name="gzdw3" style="width:100%" value={$poverty.gzdw3}></td>
+    <td><input id="lxdh3" type="text" name="lxdh3" style="width:100%" value={$poverty.lxdh3}></td>
+    <td><input id="cyqk3" type="text" name="cyqk3" style="width:100%" value={$poverty.cyqk3}></td>
+  <td><input id="whcd3" type="text" name="whcd3" style="width:100%" value={$poverty.whcd3}></td>
+    <td><input id="nianshouru3" type="text" name="nianshouru3" style="width:100%" value={$poverty.nianshouru3}></td>
+    <td><input id="jkzk3" type="text" name="jkzk3" style="width:100%" value={$poverty.jkzk3}></td>
+  </tr>
+    <tr>
+    <td><input id="jrxm4" type="text" name="jrxm4" style="width:100%" value={$poverty.jrxm4}></td>
+    <td><input id="nianling4" type="text" name="nianling4" style="width:100%" value={$poverty.nianling4}></td>
+    <td><input id="yxsgx4" type="text" name="yxsgx4" style="width:100%" value={$poverty.yxsgx4}></td>
+    <td><input id="gzdw4" type="text" name="gzdw4" style="width:100%" value={$poverty.gzdw4}></td>
+    <td><input id="lxdh4" type="text" name="lxdh4" style="width:100%" value={$poverty.lxdh4}></td>
+    <td><input id="cyqk4" type="text" name="cyqk4" style="width:100%" value={$poverty.cyqk4}></td>
+  <td><input id="whcd4" type="text" name="whcd4" style="width:100%" value={$poverty.whcd4}></td>
+    <td><input id="nianshouru4" type="text" name="nianshouru4" style="width:100%" value={$poverty.nianshouru4}></td>
+    <td><input id="jkzk4" type="text" name="jkzk4" style="width:100%" value={$poverty.jkzk4}></td>
+  </tr>
+    <tr>
+    <td><input id="jrxm5" type="text" name="jrxm5" style="width:100%" value={$poverty.jrxm5}></td>
+    <td><input id="nianling5" type="text" name="nianling5" style="width:100%" value={$poverty.nianling5}></td>
+    <td><input id="yxsgx5" type="text" name="yxsgx5" style="width:100%" value={$poverty.yxsgx5}></td>
+    <td><input id="gzdw5" type="text" name="gzdw5" style="width:100%" value={$poverty.gzdw5}></td>
+    <td><input id="lxdh5" type="text" name="lxdh5" style="width:100%" value={$poverty.lxdh5}></td>
+    <td><input id="cyqk5" type="text" name="cyqk5" style="width:100%" value={$poverty.cyqk5}></td>
+  <td><input id="whcd5" type="text" name="whcd5" style="width:100%" value={$poverty.whcd5}></td>
+    <td><input id="nianshouru5" type="text" name="nianshouru5" style="width:100%" value={$poverty.nianshouru5}></td>
+    <td><input id="jkzk5" type="text" name="jkzk5" style="width:100%" value={$poverty.jkzk5}></td>
+  </tr>
+    <tr>
+    <td><input id="jrxm6" type="text" name="jrxm6" style="width:100%" value={$poverty.jrxm6}></td>
+    <td><input id="nianling6" type="text" name="nianling6" style="width:100%" value={$poverty.nianling6}></td>
+    <td><input id="yxsgx6" type="text" name="yxsgx6" style="width:100%" value={$poverty.yxsgx6}></td>
+    <td><input id="gzdw6" type="text" name="gzdw6" style="width:100%" value={$poverty.gzdw6}></td>
+    <td><input id="lxdh6" type="text" name="lxdh6" style="width:100%" value={$poverty.lxdh6}></td>
+    <td><input id="cyqk6" type="text" name="cyqk6" style="width:100%" value={$poverty.cyqk6}></td>
+  <td><input id="whcd6" type="text" name="whcd6" style="width:100%" value={$poverty.whcd6}></td>
+    <td><input id="nianshouru6" type="text" name="nianshouru6" style="width:100%" value={$poverty.nianshouru6}></td>
+    <td><input id="jkzk6" type="text" name="jkzk6" style="width:100%" value={$poverty.jkzk6}></td>
+  </tr>
+    <tr>
+    <td><input id="jrxm7" type="text" name="jrxm7" style="width:100%" value={$poverty.jrxm7}></td>
+    <td><input id="nianling7" type="text" name="nianling7" style="width:100%" value={$poverty.nianling7}></td>
+    <td><input id="yxsgx7" type="text" name="yxsgx7" style="width:100%" value={$poverty.yxsgx7}></td>
+    <td><input id="gzdw7" type="text" name="gzdw7" style="width:100%" value={$poverty.gzdw7}></td>
+    <td><input id="lxdh7" type="text" name="lxdh7" style="width:100%" value={$poverty.lxdh7}></td>
+    <td><input id="cyqk7" type="text" name="cyqk7" style="width:100%" value={$poverty.cyqk7}></td>
+  <td><input id="whcd7" type="text" name="whcd7" style="width:100%" value={$poverty.whcd7}></td>
+    <td><input id="nianshouru7" type="text" name="nianshouru7" style="width:100%" value={$poverty.nianshouru7}></td>
+    <td><input id="jkzk7" type="text" name="jkzk7" style="width:100%" value={$poverty.jkzk7}></td>
+  </tr>
+    <tr>
+    <td><input id="jrxm8" type="text" name="jrxm8" style="width:100%" value={$poverty.jrxm8}></td>
+    <td><input id="nianling8" type="text" name="nianling8" style="width:100%" value={$poverty.nianling8}></td>
+    <td><input id="yxsgx8" type="text" name="yxsgx8" style="width:100%" value={$poverty.yxsgx8}></td>
+    <td><input id="gzdw8" type="text" name="gzdw8" style="width:100%" value={$poverty.gzdw8}></td>
+    <td><input id="lxdh8" type="text" name="lxdh8" style="width:100%" value={$poverty.lxdh8}></td>
+    <td><input id="cyqk8" type="text" name="cyqk8" style="width:100%" value={$poverty.cyqk8}></td>
+  <td><input id="whcd8" type="text" name="whcd8" style="width:100%" value={$poverty.whcd8}></td>
+    <td><input id="nianshouru8" type="text" name="nianshouru8" style="width:100%" value={$poverty.nianshouru8}></td>
+    <td><input id="jkzk8" type="text" name="jkzk8" style="width:100%" value={$poverty.jkzk8}></td>
+  </tr>
+    <tr>
+    <td><input id="jrxm9" type="text" name="jrxm9" style="width:100%" value={$poverty.jrxm9}></td>
+    <td><input id="nianling9" type="text" name="nianling9" style="width:100%" value={$poverty.nianling9}></td>
+    <td><input id="yxsgx9" type="text" name="yxsgx9" style="width:100%" value={$poverty.yxsgx9}></td>
+    <td><input id="gzdw9" type="text" name="gzdw9" style="width:100%" value={$poverty.gzdw9}></td>
+    <td><input id="lxdh9" type="text" name="lxdh9" style="width:100%" value={$poverty.lxdh9}></td>
+    <td><input id="cyqk9" type="text" name="cyqk9" style="width:100%" value={$poverty.cyqk9}></td>
+  <td><input id="whcd9" type="text" name="whcd9" style="width:100%" value={$poverty.whcd9}></td>
+    <td><input id="nianshouru9" type="text" name="nianshouru9" style="width:100%" value={$poverty.nianshouru9}></td>
+    <td><input id="jkzk9" type="text" name="jkzk9" style="width:100%" value={$poverty.jkzk9}></td>
+  </tr>
+    <tr>
+    <td><input id="jrxm10" type="text" name="jrxm10" style="width:100%" value={$poverty.jrxm10}></td>
+    <td><input id="nianling10" type="text" name="nianling10" style="width:100%" value={$poverty.nianling10}></td>
+    <td><input id="yxsgx10" type="text" name="yxsgx10" style="width:100%" value={$poverty.yxsgx10}></td>
+    <td><input id="gzdw10" type="text" name="gzdw10" style="width:100%" value={$poverty.gzdw10}></td>
+    <td><input id="lxdh10" type="text" name="lxdh10" style="width:100%" value={$poverty.lxdh10}></td>
+    <td><input id="cyqk10" type="text" name="cyqk10" style="width:100%" value={$poverty.cyqk10}></td>
+  <td><input id="whcd10" type="text" name="whcd10" style="width:100%" value={$poverty.whcd10}></td>
+    <td><input id="nianshouru10" type="text" name="nianshouru10" style="width:100%" value={$poverty.nianshouru10}></td>
+    <td><input id="jkzk10" type="text" name="jkzk10" style="width:100%" value={$poverty.jkzk10}></td>
+  </tr>  
+</table>
+
+ <h2>影响家庭经济状况有关信息</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+    <th>家庭主要收入来源类型</th>
+    <td><input name="srlylx" type="radio" value="工资，奖金，津贴，补助和其他劳动收入" />工资，奖金，津贴，补助和其他劳动收入
+    </td><td> <input name="srlylx" type="radio" value="离退休金，基本养老金，基本生活费，失业保险金" />离退休金，基本养老金，基本生活费，失业保险金
+       </td><td>    <input name="srlylx" type="radio" value="继承，接收赠予，出租或出售家庭财产获得收入" />继承，接收赠予，出租或出售家庭财产获得收入
+        </td><td>     <input name="srlylx" type="radio" value="存款及利息，有价证券及红利，股票，博彩收入" />存款及利息，有价证券及红利，股票，博彩收入
+        </td><td>   <input name="srlylx" type="radio" value="经商，办厂以及从事种植业，养殖业，加工业扣除必要成本后的收入" />经商，办厂以及从事种植业，养殖业，加工业扣除必要成本后的收入
+        </td><td>     <input name="srlylx" type="radio" value="赡养费，抚养费" />赡养费，抚养费
+       </td><td>    <input name="srlylx" type="radio" value="自谋职业收入" >自谋职业收入
+         </td><td>    <input name="srlylx" type="radio" value="其他应当计入家庭的收入" >其他应当计入家庭的收入</td>
+            <script>initradio('srlylx',"{$poverty.srlylx}");</script></td>
+  </tr>
+   <tr>
+    <th>学生已获资助情况</th>
+    <td><input id="yhzzlx" type="text" name="yhzzlx" style="width:300px" value={$poverty.yhzzlx}></td>
+  </tr>
+   <tr>
+    <th>（如无以下情形，只需填写“无”）：</th>
+  </tr>
+   <tr>
+    <th>家庭遭受自然灾害情况</th>
+    <td><input id="zrzhqk" type="text" name="zrzhqk" style="width:300px" value={$poverty.zrzhqk}></td>
+  </tr>
+     <tr>
+    <th>家庭遭受突发意外事件</th>
+    <td><input id="tfywsj" type="text" name="tfywsj" style="width:300px" value={$poverty.tfywsj}></td>
+  </tr> 
+     <tr>
+    <th>家庭欠债情况</th>
+    <td><input id="jtqzqk" type="text" name="jtqzqk" style="width:300px" value={$poverty.jtqzqk}></td>
+  </tr> 
+     <tr>
+    <th>其他情况</th>
+    <td><input id="qtqk" type="text" name="qtqk" style="width:300px" value={$poverty.qtqk}></td>
+  </tr>  
+</table>
+
+  <h2>乡（镇）或街道信息</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+    <th>详细通讯地址</th>
+    <td><input id="xztxdz" type="text" name="xztxdz" style="width:300px" value={$poverty.xztxdz}></td>
+  </tr> 
+     <tr>
+    <th>邮政编码</th>
+    <td><input id="xzyzbm" type="text" name="xzyzbm" style="width:300px" value={$poverty.xzyzbm}></td>
+  </tr> 
+     <tr>
+    <th>联系电话</th>
+    <td><input id="xzlxdh" type="text" name="xzlxdh" style="width:300px" value={$poverty.xzlxdh}></td>
+  </tr> 
+</table>
+
+        <div id='submit'  align = "center" >
+        <button type="submit" >提交</button><br/><br/>
+        </div>
+  </from>
+</body>
+</html>

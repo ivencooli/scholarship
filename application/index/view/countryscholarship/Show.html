@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+
+<title>本专科生国家奖学金申请审批表</title>
+</head>
+<body id="page">
+<h2>基本情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>学校</th>
+    <td>{$countryscholarship.xuexiao}</td>
+  </tr>
+  <tr>
+    <th>院系</th>
+    <td>{$countryscholarship.yuanxi}</td>
+  </tr>
+  <tr>
+    <th>学号</th>
+    <td>{$countryscholarship.xuehao}</td>
+  </tr>
+  <tr>
+    <th>专业</th>
+    <td>{$countryscholarship.zhuanye}</td>
+  </tr>
+  <tr>
+    <th>姓名</th>
+    <td>{$countryscholarship.xingming}</td>
+  </tr>
+  <tr>
+    <th>性别</th>
+    <td>{$countryscholarship.xingbie}</td>
+  </tr>
+  <tr>
+    <th>出生年月</th>
+    <td>{$countryscholarship.csny}</td>
+  </tr>
+   <tr>
+    <th>民族</th>
+    <td>{$countryscholarship.minzu}</td>
+  </tr>
+  <tr>
+    <th>政治面貌</th>
+    <td>{$countryscholarship.zzmm}</td>
+  </tr>
+  <tr>
+    <th>联系电话</th>
+    <td>{$countryscholarship.lxdh}</td>
+  </tr>
+  <tr>
+    <th>入学时间</th>
+    <td>{$countryscholarship.rxsj}</td>
+  </tr>
+  <tr>
+    <th>学制</th>
+    <td>{$countryscholarship.xuezhi}</td>
+  </tr>
+   <tr>
+    <th>身份证号</th>
+    <td>{$countryscholarship.sfzh}</td>
+  </tr>
+  </table>
+
+<h2>学习情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+    <th>成绩排名</th>
+    <td>{$countryscholarship.mingci}/{$countryscholarship.zongrenshu}（名次/总人数）</td>
+      </tr>
+      <tr>
+    <th>必修课</th>
+    <td>必修课{$countryscholarship.bixiuke}门，其中及格以上{$countryscholarship.jige}门</td>
+    </tr>
+    <tr>
+    <th>实行综合考评排名</th>
+    <td>{$countryscholarship.zhkp}
+      </td>
+  </tr>
+  <tr>
+    <th>如实行综合考评排名</th>
+    <td>排名：{$countryscholarship.zhkpmc}/{$countryscholarship.zhkpzrs}（名次/总人数）</td>
+    </tr>
+</table>
+
+<h2>大学期间主要获奖情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>日期</th>
+    <th>奖项名称</th>
+    <th>颁奖单位</th>
+  </tr>
+  <tr>
+    <td>{$countryscholarship.riqi1}</td>
+    <td>{$countryscholarship.jxmc1}</td>
+    <td>{$countryscholarship.bjdw1}</td>
+  </tr>
+  <tr>
+    <td>{$countryscholarship.riqi2}</td>
+    <td>{$countryscholarship.jxmc2}</td>
+    <td>{$countryscholarship.bjdw2}</td>
+  </tr>
+  <tr>
+    <td>{$countryscholarship.riqi3}</td>
+    <td>{$countryscholarship.jxmc3}</td>
+    <td>{$countryscholarship.bjdw3}</td>
+  </tr>
+   <tr>
+    <td>{$countryscholarship.riqi4}</td>
+    <td>{$countryscholarship.jxmc4}</td>
+    <td>{$countryscholarship.bjdw4}</td>
+  </tr>  
+</table>
+
+
+
+  <h2>申请理由</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>申请理由</th>
+    <td>{$countryscholarship.sqly}</td>
+  </tr>
+</table>
+
+ <div id="activity" align = "center">
+        <button onclick="window.location='change'">修改</button>
+        <button onclick="window.location='printword'">打印</button>
+</div>
+</body>
+</html>

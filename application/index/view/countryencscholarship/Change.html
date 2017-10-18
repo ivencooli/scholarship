@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+
+<title>本专科生国家励志奖学金申请审批表</title>
+</head>
+<body id="page">
+<form method="post"  action="postdate" onSubmit="return checktext('Countryencscholarship')">
+<h2>基本情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>学校</th>
+    <td><input id="xuexiao" type="text" name="xuexiao" style="width:100px" value={$countryencscholarship.xuexiao}></td>
+  </tr>
+  <tr>
+    <th>院系</th>
+    <td><input id="yuanxi" type="text" name="yuanxi" style="width:100px" value={$countryencscholarship.yuanxi}></td>
+  </tr>
+  <tr>
+    <th>专业</th>
+    <td><input id="zhuanye" type="text" name="zhuanye" style="width:100px" value={$countryencscholarship.zhuanye}></td>
+  </tr>
+  <tr>
+    <th>姓名</th>
+    <td><input id="xingming" type="text" name="xingming" style="width:100px" value={$countryencscholarship.xingming}></td>
+  </tr>
+  <tr>
+    <th>性别</th>
+    <td><input id="xingbie" type="text" name="xingbie" style="width:100px" value={$countryencscholarship.xingbie}></td>
+  </tr>
+  <tr>
+    <th>出生年月</th>
+    <td><input id="csny" type="text" name="csny" style="width:100px" value={$countryencscholarship.csny}></td>
+  </tr>
+   <tr>
+    <th>民族</th>
+    <td><input id="minzu" type="text" name="minzu" style="width:100px" value={$countryencscholarship.minzu}></td>
+  </tr>
+  <tr>
+    <th>政治面貌</th>
+    <td><input id="zzmm" type="text" name="zzmm" style="width:100px" value={$countryencscholarship.zzmm}></td>
+  </tr>
+  <tr>
+    <th>联系电话</th>
+    <td><input id="lxdh" type="text" name="lxdh" style="width:100px" value={$countryencscholarship.lxdh}></td>
+  </tr>
+  <tr>
+    <th>入学时间</th>
+    <td><input id="rxsj" type="text" name="rxsj" style="width:100px" value={$countryencscholarship.rxsj}></td>
+  </tr>
+  <tr>
+    <th>班级</th>
+    <td><input id="banji" type="text" name="banji" style="width:100px" value={$countryencscholarship.banji}></td>
+  </tr>
+  <tr>
+    <th>学号</th>
+    <td><input id="xuehao" type="text" name="xuehao" style="width:100px" value={$countryencscholarship.xuehao}></td>
+  </tr>
+   <tr>
+    <th>身份证号</th>
+    <td><input id="sfzh" type="text" name="sfzh" style="width:100px" value={$countryencscholarship.sfzh}></td>
+  </tr>
+   <tr>
+    <th>经学校认定的经济困难程度</th>
+    <td><input name="kncd" type="radio" value="一般困难" /> 一般困难 <input name="kncd" type="radio" value="困难" /> 困难 <input name="kncd" type="radio" value="特殊困难" /> 特殊困难 </td>
+    <script>initradio('kncd',"{$countryencscholarship.kncd}");</script>
+  </tr>
+  </table>
+
+  <h2>家庭情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>家庭人口总数</th>
+    <td><input id="rkzs" type="text" name="rkzs" style="width:30px" value={$countryencscholarship.rkzs}></td>
+  </tr>
+  <tr>
+    <th>家庭人均月收入（元）</th>
+    <td><input id="yueshouru" type="text" name="yueshouru" style="width:30px" value={$countryencscholarship.yueshouru}></td>
+  </tr>
+  <tr>
+    <th>家庭住址</th>
+    <td><input id="jtzz" type="text" name="jtzz"  style="width:30px" value={$countryencscholarship.jtzz}></td>
+  </tr>
+  <tr>
+    <th>邮政编码</th>
+    <td><input id="yzbm" type="text" name="yzbm" style="width:30px" value={$countryencscholarship.yzbm}></td>
+  </tr>
+</table>
+
+<h2>综合测评情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>总人数</th>
+    <td><input id="zongrenshu" type="text" name="zongrenshu" style="width:30px" value={$countryencscholarship.zongrenshu}></td>
+  </tr>
+  <tr>
+    <th>学习成绩排名</th>
+    <td><input id="cjpm" type="text" name="cjpm" style="width:30px" value={$countryencscholarship.cjpm}></td>
+  </tr>
+  <tr>
+    <th>综合考评排名</th>
+    <td><input id="kppm" type="text" name="kppm"  style="width:30px" value={$countryencscholarship.kppm}></td>
+  </tr>
+  <tr>
+    <th>上述采用的排名排序为（只可选一种）</th>
+    <td><input type="radio" name="pmpx" value="按专业" /> 按专业 
+            <input type="radio" name="pmpx" value="按年级" /> 按年级 
+            <input type="radio" name="pmpx" value="按班级" /> 按班级 
+      </td>
+      <script>initradio('pmpx',"{$countryencscholarship.pmpx}");</script>
+  </tr>
+</table>
+
+ <h2>获奖情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>获奖时间</th>
+    <th>奖项名称</th>
+    <th>颁奖单位</th>
+  </tr>
+  <tr>
+    <td><input id="hjsj1" type="text" name="hjsj1" style="width:100%" value={$countryencscholarship.hjsj1}></td>
+    <td><input id="jxmc1" type="text" name="jxmc1" style="width:100%" value={$countryencscholarship.jxmc1}></td>
+    <td><input id="bjdw1" type="text" name="bjdw1" style="width:100%" value={$countryencscholarship.xuexiao}></td>
+  </tr>
+  <tr>
+    <td><input id="hjsj2" type="text" name="hjsj2" style="width:100%" value={$countryencscholarship.hjsj2}></td>
+    <td><input id="jxmc2" type="text" name="jxmc2" style="width:100%" value={$countryencscholarship.jxmc2}></td>
+    <td><input id="bjdw2" type="text" name="bjdw2" style="width:100%" value={$countryencscholarship.bjdw2}></td>
+  </tr>
+  <tr>
+    <td><input id="hjsj3" type="text" name="hjsj3" style="width:100%" value={$countryencscholarship.hjsj3}></td>
+    <td><input id="jxmc3" type="text" name="jxmc3" style="width:100%" value={$countryencscholarship.jxmc3}></td>
+    <td><input id="bjdw3" type="text" name="bjdw3" style="width:100%" value={$countryencscholarship.bjdw3}></td>
+  </tr>
+  <tr>
+    <td>其中，院级奖励<input id="yjjl" type="text" name="yjjl" value={$countryencscholarship.yjjl}>项；</td>
+     <td> 校级奖励<input id="xjjl" type="text" name="xjjl" value={$countryencscholarship.xjjl}>项；</td>
+     <td> 校级以上奖励<input id="xjysjl" type="text" name="xjysjl" value={$countryencscholarship.xjysjl}>项</td>
+  </tr>  
+</table>
+
+  <h2>申请理由</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>申请理由</th>
+    <td><textarea id="sqly" name="sqly"style="width: 400px; height: 201px;padding: 10px 3px 3px 5px;" >{$countryencscholarship.sqly}</textarea></td>
+  </tr>
+</table>
+
+        <div id='submit'  align = "center" >
+        <button type="submit" >提交</button><br/><br/>
+        </div>
+  </from>
+</body>
+</html>

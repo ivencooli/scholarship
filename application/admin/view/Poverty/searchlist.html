@@ -1,0 +1,82 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>家庭经济困难认证查询</title>
+<link type="text/css" rel="stylesheet" href="__STATIC__/admin/css/style.css" />
+<script type="text/javascript" src="__STATIC__/admin/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/menu.js"></script>
+</style> 
+<script type="text/javascript">
+function checkstu() {  
+   var c1 = document.getElementById("c1").value;
+   var c2 = document.getElementById("c2").value;
+   var c3 = document.getElementById("c3").value;
+   var c4 = document.getElementById("c4").value;
+   if(c4 == ""){c4 = "notype"};
+    window.frameSecondBord.location.href= "checkall?yuanxi="+c1+"&banbie="+c2+"&zhuanye="+c3+"&xuejihao="+c4; 
+  }
+
+  function deletestu() {  
+      if (confirm("您确定删除所筛选的条件吗")) {  
+             var c1 = document.getElementById("c1").value;
+             var c2 = document.getElementById("c2").value;
+             var c3 = document.getElementById("c3").value;
+             var c4 = document.getElementById("c4").value;
+             if(c4 == ""){c4 = "notype"};
+              window.frameSecondBord.location.href= "deleteall?yuanxi="+c1+"&banbie="+c2+"&zhuanye="+c3+"&xuejihao="+c4; 
+        } else {  
+              return false;
+          }  
+  }
+
+function outexcel() {  
+      var c1 = document.getElementById("c1").value;
+      var c2 = document.getElementById("c2").value;
+       var c3 = document.getElementById("c3").value;
+      var c4 = document.getElementById("c4").value;
+      if(c4 == ""){c4 = "notype"};
+          window.frameSecondBord.location.href= "outexcel?yuanxi="+c1+"&banbie="+c2+"&zhuanye="+c3+"&xuejihao="+c4; 
+}
+</script>
+</head>
+
+<body>
+<div id="searchlist">
+<br/>
+&nbsp&nbsp
+学院：<select id="c1">
+<option value="notype">全部</option>
+{volist name="yuanxis" id="vo"}
+<option value="{$vo.yuanxi}">{$vo.yuanxi}</option>
+{/volist}
+</select>
+&nbsp&nbsp
+专业：<select id="c3">
+<option value="notype">全部</option>
+{volist name="zhuanyes" id="vo"}
+<option value="{$vo.zhuanye}">{$vo.zhuanye}</option>
+{/volist}
+</select>
+&nbsp&nbsp
+班级：<select id="c2">
+<option value="notype">全部</option>
+{volist name="banbies" id="vo"}
+<option value="{$vo.banbie}">{$vo.banbie}</option>
+{/volist}
+</select>
+&nbsp&nbsp
+学号：<input id="c4" type="text"  >
+
+
+<button onclick="checkstu()">查询</button>
+<button onclick="deletestu()">删除</button> 
+<button onclick="outexcel()">导出</button>
+</div>
+
+
+<iframe id="frameSecondBord" name="frameSecondBord" frameborder="0" width="100%" height="100%" src="showall"></iframe>
+
+<script>navList(12);</script>
+</body>
+</html>

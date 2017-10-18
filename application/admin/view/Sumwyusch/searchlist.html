@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>国家奖学金查询</title>
+<link type="text/css" rel="stylesheet" href="__STATIC__/admin/css/style.css" />
+<script type="text/javascript" src="__STATIC__/admin/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/menu.js"></script>
+</style> 
+<script type="text/javascript">
+function checkstu() {  
+   var c1 = document.getElementById("c1").value;
+   var c2 = document.getElementById("c2").value;
+   var c3 = document.getElementById("c3").value;
+   if(c3 == ""){c3 = "notype"};
+    window.frameSecondBord.location.href= "checkall?yuanxi="+c1+"&banbie="+c2+"&xuejihao="+c3; 
+  }
+
+  function deletestu() {  
+      if (confirm("您确定删除所筛选的条件吗")) {  
+             var c1 = document.getElementById("c1").value;
+             var c2 = document.getElementById("c2").value;
+             var c3 = document.getElementById("c3").value;
+             if(c3 == ""){c3 = "notype"};
+              window.frameSecondBord.location.href= "deleteall?yuanxi="+c1+"&banbie="+c2+"&xuejihao="+c3; 
+        } else {  
+              return false;
+          }  
+  }
+
+function outexcel() {  
+      var c1 = document.getElementById("c1").value;
+      var c2 = document.getElementById("c2").value;
+      var c3 = document.getElementById("c3").value;
+      if(c3 == ""){c3 = "notype"};
+          window.frameSecondBord.location.href= "outexcel?yuanxi="+c1+"&banbie="+c2+"&xuejihao="+c3; 
+}
+</script>
+</head>
+
+<body>
+<div id="searchlist">
+<br/>
+&nbsp&nbsp
+学院：<select id="c1">
+<option value="notype">全部</option>
+<option value="经济管理学院">经济管理学院</option>
+<option value="马克思主义学院">马克思主义学院</option>
+<option value="外国语学院">外国语学院</option>   
+<option value="应用物理与材料学院">应用物理与材料学院</option>
+<option value="计算机学院">计算机学院</option>
+<option value="土木建筑学院">土木建筑学院</option>
+<option value="纺织材料与工程学院">纺织材料与工程学院</option>
+<option value="艺术设计学院">艺术设计学院</option>
+<option value="政法学院">政法学院</option>
+<option value="文学院">文学院</option>
+<option value="数学与计算科学学院">数学与计算科学学院</option>
+<option value=" 信息工程学院">信息工程学院</option>
+<option value=" 机电工程学院">  机电工程学院</option>
+<option value="化学与环境工程学院">化学与环境工程学院</option>
+<option value="轨道交通学院">轨道交通学院</option>
+<option value="研究生院">研究生院</option>
+</select>
+&nbsp&nbsp
+班级：<select id="c2">
+<option value="notype">全部</option>
+<script>
+for(var i=14;i<=18;i++){
+    for (var j=0;j<=1;j++) {
+        for (var k=0;k<=9;k++) {
+            for (var l=0;l<=2;l++) {
+                  for (var m=0;m<=9;m++) {
+                        document.write("<option value='"+i+j+k+l+m+"'>"+i+j+k+l+m+"</option>");
+                  };
+              };
+        };
+    };
+}
+</script>      
+</select>
+&nbsp&nbsp
+学号：<input id="c3" type="text"  >
+
+
+<button onclick="checkstu()">查询</button>
+<button onclick="deletestu()">删除</button>
+<button onclick="outexcel()">导出</button>
+</div>
+
+
+<iframe id="frameSecondBord" name="frameSecondBord" frameborder="0" width="100%" height="100%" src="showall"></iframe>
+
+<script>navList(12);</script>
+</body>
+</html>

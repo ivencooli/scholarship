@@ -1,0 +1,50 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<link href="__STATIC__/admin/css/bluetable.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/admin/js/table.js"></script>  
+<style type="text/css">
+  .pagination{ text-align: center;font-size: 12px;padding: 10px 0;display:inline-block}
+  .pagination li{list-style-type:none; float:left;}
+.pagination a,.pagination span{display: inline-block;padding: 0 10px;height: 28px;line-height: 28px;border: 1px solid #ddd;border-radius: 4px;text-decoration: none;color: #999;cursor: pointer;  margin-right:5px;}
+.pagination a:hover:not(.disabled):not(.current),.pagination span:hover:not(.disabled):not(.current){color:#f04848}
+.pagination a.disabled,.pagination span.disabled{color: #bfbfbf;background: #f5f5f5;cursor: no-drop;border: 1px solid #ddd;}
+.pagination a.current,.pagination span.current{color: #fff;background: #f04848;border: 1px solid #f04848;}
+</style>
+<script type="text/javascript">
+function deleteid(teaid){
+    if (confirm("您确定删除"+teaid+"吗？")) {  
+            window.location.href= "deleteteacher?usertype=teaid&username="+teaid;
+        }  
+        else {  
+            return false;
+        }  
+}
+</script>
+</head>  
+<body>  
+
+<div class = "showpage" align = "center">
+<table class="bordered" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr >
+            <th>辅导员id </th>
+            <th>学院</th>
+            <th>操作</th>
+  </tr> 
+     {volist name="list" id="vo"}
+      <tr >
+            <td> {$vo.teaid}</td>
+            <td> {$vo.yuanxi}</td>
+            <td><button onclick="deleteid('{$vo.teaid}')">删除</button></td>
+  </tr> 
+      {/volist} 
+</table>
+{$page}
+      <br/> <br/> <br/> <br/> <br/> 
+</div>    
+
+</body>  
+</html> 
+
+
+

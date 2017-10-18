@@ -1,0 +1,81 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<link href="__STATIC__/admin/css/bluetable.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/admin/js/table.js"></script>  
+<script type="text/javascript">
+function back(){
+    window.history.back(); 
+}
+function changestu(stuid,type){
+   var name = prompt("请输入修改的内容", "");
+   if (name) {  
+           window.location.href= "changestu?stuid="+stuid+"&changetype="+type+"&changename="+name;
+        } 
+  else {
+          alert("输入不能为空");
+            return false;
+        } 
+}
+
+function showbutton(but){
+        var mybut = document.getElementById(but);  
+        mybut.style.display="block"; 
+}
+function hidebutton(but){
+        var mybut = document.getElementById(but);  
+        mybut.style.display="none"; 
+}
+</script>
+</head>  
+<body>  
+
+<div class = "showpage" align = "center">
+<table class="bordered" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <th>学生姓名</th>
+    <th>公民身份证号码</th>
+    <th>院系</th>
+    <th>专业</th>
+  </tr>
+  <tr>
+    <td onmouseover="showbutton('but1')" onmouseout="hidebutton('but1')">{$sumconsch.xingming}<button id="but1" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','xingming')">修改</button></td>
+    <td onmouseover="showbutton('but2')" onmouseout="hidebutton('but2')">{$sumconsch.sfzh}<button id="but2" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','sfzh')">修改</button></td>
+    <td onmouseover="showbutton('but3')" onmouseout="hidebutton('but3')">{$sumconsch.yuanxi}<button id="but3" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','yuanxi')">修改</button></td>
+    <td onmouseover="showbutton('but4')" onmouseout="hidebutton('but4')">{$sumconsch.zhuanye}<button id="but4" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','zhuanye')">修改</button></td>
+  </tr>
+  <tr>
+    <th>学号</th>
+    <th>性别</th>
+    <th>民族</th>
+    <th>入学年月</th>
+  </tr>
+  <tr>
+    <td onmouseover="showbutton('but5')" onmouseout="hidebutton('but5')">{$sumconsch.xuejihao}<button id="but5" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','xuejihao')">修改</button></td>
+    <td onmouseover="showbutton('but6')" onmouseout="hidebutton('but6')">{$sumconsch.xingbie}<button id="but6" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','xingbie')">修改</button></td>
+    <td onmouseover="showbutton('but7')" onmouseout="hidebutton('but7')">{$sumconsch.minzu}<button id="but7" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','minzu')">修改</button></td>
+    <td onmouseover="showbutton('but8')" onmouseout="hidebutton('but8')">{$sumconsch.rxny}<button id="but8" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','rxny')">修改</button></td>
+  </tr>
+  <tr>
+    <th>成绩排名（名次）</th>
+    <th>成绩排名（总人数）</th>
+    <th>综合考评排名（名次）</th>
+    <th>综合考评排名（总人数）</th>
+</tr>
+  <tr>
+    <td onmouseover="showbutton('but9')" onmouseout="hidebutton('but9')">{$sumconsch.cjpmmc}<button id="but9" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','cjpmmc')">修改</button></td>
+    <td onmouseover="showbutton('but10')" onmouseout="hidebutton('but10')">{$sumconsch.cjpmzrs}<button id="but10" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','cjpmzrs')">修改</button></td></td>
+    <td onmouseover="showbutton('but11')" onmouseout="hidebutton('but11')">{$sumconsch.zhkpmc}<button id="but11" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','zhkpmc')">修改</button></td>
+    <td onmouseover="showbutton('but12')" onmouseout="hidebutton('but12')">{$sumconsch.zhkpzrs}<button id="but12" style="display:none;float:right;" onclick="changestu('{$sumconsch.stuid}','zhkpzrs')">修改</button></td></td>
+</tr>
+</table>
+<br/><br/>  
+
+<button onclick="back()">返回</button>
+</div>    
+
+</body>  
+</html> 
+
+
+

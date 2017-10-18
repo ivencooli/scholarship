@@ -1,0 +1,461 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<link href="__STATIC__/admin/css/bluetable.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/admin/js/table.js"></script>  
+<script type="text/javascript">
+function back(){
+    window.history.back(); 
+}
+function changestu(stuid,type){
+   var name = prompt("请输入修改的内容", "");
+   if (name) {  
+           window.location.href= "changestu?stuid="+stuid+"&changetype="+type+"&changename="+name;
+        } 
+  else {
+          alert("输入不能为空");
+            return false;
+        } 
+}
+
+function showbutton(but){
+        var mybut = document.getElementById(but);  
+        mybut.style.display="block"; 
+}
+function hidebutton(but){
+        var mybut = document.getElementById(but);  
+        mybut.style.display="none"; 
+}
+</script>
+</head>  
+<body>  
+
+<div class = "showpage" align = "center">
+<table class="bordered" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>家庭情况</th>
+    <th>类别</th>
+    <th>证明材料（学校核实）</th>
+    <th>证明材料复印件（学校存档备查）</th>
+    <th>是否符合</th>
+    <th>是否提供证明材料审核</th>
+    <th>是否提供证明材料复印件存档</th>
+    <th>备注</th>
+  </tr>
+   <tr>
+    <td>建档立卡户 </td>
+    <td>A</td>
+    <td>扶贫帮扶手册、户口簿、相关证明</td>
+    <td>扶贫帮扶手册、户口簿、相关证明</td>
+    <td onmouseover="showbutton('but1')" onmouseout="hidebutton('but1')">{$povertysl.jdlkhfh}<button id="but1" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jdlkhfh')">修改</button></td>
+    <td onmouseover="showbutton('but2')" onmouseout="hidebutton('but2')">{$povertysl.jdlkhsh}<button id="but2" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jdlkhsh')">修改</button></td>
+    <td onmouseover="showbutton('but3')" onmouseout="hidebutton('but3')">{$povertysl.jdlkhcd}<button id="but3" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jdlkhcd')">修改</button></td>
+    <td onmouseover="showbutton('but4')" onmouseout="hidebutton('but4')">{$povertysl.jdlkhbz}<button id="but4" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jdlkhbz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>特困供养人员   </td>
+    <td>A</td>
+    <td>五保证、特困人员救助供养证、户口簿</td>
+    <td>五保证、特困人员救助供养证、户口簿</td>
+    <td onmouseover="showbutton('but5')" onmouseout="hidebutton('but5')">{$povertysl.tkgyryfh}<button id="but5" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkgyryfh')">修改</button></td>
+    <td onmouseover="showbutton('but6')" onmouseout="hidebutton('but6')">{$povertysl.tkgyrysh}<button id="but6" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkgyrysh')">修改</button></td>
+    <td onmouseover="showbutton('but7')" onmouseout="hidebutton('but7')">{$povertysl.tkgyrycd}<button id="but7" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkgyrycd')">修改</button></td>
+    <td onmouseover="showbutton('but8')" onmouseout="hidebutton('but8')">{$povertysl.tkgyrybz}<button id="but8" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkgyrybz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>孤儿 </td>
+    <td>A</td>
+    <td>儿童福利证、孤儿证明</td>
+    <td>儿童福利证、孤儿证明</td>
+    <td onmouseover="showbutton('but9')" onmouseout="hidebutton('but9')">{$povertysl.guerfh}<button id="but9" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','guerfh')">修改</button></td>
+    <td onmouseover="showbutton('but10')" onmouseout="hidebutton('but10')">{$povertysl.guersh}<button id="but10" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','guersh')">修改</button></td>
+    <td onmouseover="showbutton('but11')" onmouseout="hidebutton('but11')">{$povertysl.guercd}<button id="but11" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','guercd')">修改</button></td>
+    <td onmouseover="showbutton('but12')" onmouseout="hidebutton('but12')">{$povertysl.guerbz}<button id="but12" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','guerbz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>城乡最低生活保障户 </td>
+    <td>A</td>
+    <td>低保证、户口簿</td>
+    <td>低保证、户口簿</td>
+    <td onmouseover="showbutton('but13')" onmouseout="hidebutton('but13')">{$povertysl.cszdshbzhfh}<button id="but13" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cszdshbzhfh')">修改</button></td>
+    <td onmouseover="showbutton('but14')" onmouseout="hidebutton('but14')">{$povertysl.cszdshbzhsh}<button id="but14" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cszdshbzhsh')">修改</button></td>
+    <td onmouseover="showbutton('but15')" onmouseout="hidebutton('but15')">{$povertysl.cszdshbzhcd}<button id="but15" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cszdshbzhcd')">修改</button></td>
+    <td onmouseover="showbutton('but16')" onmouseout="hidebutton('but16')">{$povertysl.cszdshbzhbz}<button id="but16" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cszdshbzhbz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>特困职工子女 </td>
+    <td>A</td>
+    <td>特困职工证、户口簿</td>
+    <td>特困职工证、户口簿</td>
+    <td onmouseover="showbutton('but17')" onmouseout="hidebutton('but17')">{$povertysl.tkzgznfh}<button id="but17" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkzgznfh')">修改</button></td>
+    <td onmouseover="showbutton('but18')" onmouseout="hidebutton('but18')">{$povertysl.tkzgznsh}<button id="but18" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkzgznsh')">修改</button></td>
+    <td onmouseover="showbutton('but19')" onmouseout="hidebutton('but19')">{$povertysl.tkzgzncd}<button id="but19" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkzgzncd')">修改</button></td>
+    <td onmouseover="showbutton('but20')" onmouseout="hidebutton('but20')">{$povertysl.tkzgznbz}<button id="but20" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','tkzgznbz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>城镇低收入困难家庭 </td>
+    <td>A</td>
+    <td>救助证、低收入证、户口簿</td>
+    <td>救助证、低收入证、户口簿</td>
+    <td onmouseover="showbutton('but21')" onmouseout="hidebutton('but21')">{$povertysl.czdsrknjtfh}<button id="but21" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','czdsrknjtfh')">修改</button></td>
+    <td onmouseover="showbutton('but22')" onmouseout="hidebutton('but22')">{$povertysl.czdsrknjtsh}<button id="but22" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','czdsrknjtsh')">修改</button></td>
+    <td onmouseover="showbutton('but23')" onmouseout="hidebutton('but23')">{$povertysl.czdsrknjtcd}<button id="but23" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','czdsrknjtcd')">修改</button></td>
+    <td onmouseover="showbutton('but24')" onmouseout="hidebutton('but24')">{$povertysl.czdsrknjtbz}<button id="but24" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','czdsrknjtbz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>享受国家定期抚恤补助的优抚对象（含烈士、牺牲军人亲属）、因公牺牲警察子女 </td>
+    <td>A</td>
+    <td>优抚对象证明、因公牺牲警察证明、户口簿</td>
+    <td>优抚对象证明、因公牺牲警察证明、户口簿</td>
+    <td onmouseover="showbutton('but25')" onmouseout="hidebutton('but25')">{$povertysl.yfdxfh}<button id="but25" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yfdxfh')">修改</button></td>
+    <td onmouseover="showbutton('but26')" onmouseout="hidebutton('but26')">{$povertysl.yfdxsh}<button id="but26" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yfdxsh')">修改</button></td>
+    <td onmouseover="showbutton('but27')" onmouseout="hidebutton('but27')">{$povertysl.yfdxcd}<button id="but27" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yfdxcd')">修改</button></td>
+    <td onmouseover="showbutton('but28')" onmouseout="hidebutton('but28')">{$povertysl.yfdxbz}<button id="but28" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yfdxbz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>一年内家庭遭受重大自然灾害，受灾严重（一年内） </td>
+    <td>A</td>
+    <td>民政等部门相关证明</td>
+    <td>民政等部门相关证明</td>
+    <td onmouseover="showbutton('but29')" onmouseout="hidebutton('but29')">{$povertysl.ynzdzrzhfh}<button id="but29" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ynzdzrzhfh')">修改</button></td>
+    <td onmouseover="showbutton('but30')" onmouseout="hidebutton('but30')">{$povertysl.ynzdzrzhsh}<button id="but30" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ynzdzrzhsh')">修改</button></td>
+    <td onmouseover="showbutton('but31')" onmouseout="hidebutton('but31')">{$povertysl.ynzdzrzhcd}<button id="but31" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ynzdzrzhcd')">修改</button></td>
+    <td onmouseover="showbutton('but32')" onmouseout="hidebutton('but32')">{$povertysl.ynzdzrzhbz}<button id="but32" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ynzdzrzhbz')">修改</button></td>
+  </tr>
+    <tr>
+    <td>一年内家庭遭重大突发意外事件（不含自然灾害）（一年内） </td>
+    <td>A</td>
+    <td>相关证明</td>
+    <td>相关证明</td>
+    <td onmouseover="showbutton('but33')" onmouseout="hidebutton('but33')">{$povertysl.yntuywsjfh}<button id="but33" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yntuywsjfh')">修改</button></td>
+    <td onmouseover="showbutton('but34')" onmouseout="hidebutton('but34')">{$povertysl.yntuywsjsh}<button id="but34" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yntuywsjsh')">修改</button></td>
+    <td onmouseover="showbutton('but35')" onmouseout="hidebutton('but35')">{$povertysl.yntuywsjcd}<button id="but35" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yntuywsjcd')">修改</button></td>
+    <td onmouseover="showbutton('but36')" onmouseout="hidebutton('but36')">{$povertysl.yntuywsjbz}<button id="but36" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','yntuywsjbz')">修改</button></td>
+    <tr>
+    <td>残疾学生 </td>
+    <td>A</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but37')" onmouseout="hidebutton('but37')">{$povertysl.cjxsfh}<button id="but37" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cjxsfh')">修改</button></td>
+    <td onmouseover="showbutton('but38')" onmouseout="hidebutton('but38')">{$povertysl.cjxssh}<button id="but38" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cjxssh')">修改</button></td>
+    <td onmouseover="showbutton('but39')" onmouseout="hidebutton('but39')">{$povertysl.cjxscd}<button id="but39" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cjxscd')">修改</button></td>
+    <td onmouseover="showbutton('but40')" onmouseout="hidebutton('but40')">{$povertysl.cjxsbz}<button id="but40" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','cjxsbz')">修改</button></td>
+    <tr>
+    <td>父母均患重大疾病(不含残疾） </td>
+    <td>A</td>
+    <td>相关证明、户口簿</td>
+    <td>相关证明、户口簿</td>
+    <td onmouseover="showbutton('but41')" onmouseout="hidebutton('but41')">{$povertysl.fmjhzdjbfh}<button id="but41" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjhzdjbfh')">修改</button></td>
+    <td onmouseover="showbutton('but42')" onmouseout="hidebutton('but42')">{$povertysl.fmjhzdjbsh}<button id="but42" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjhzdjbsh')">修改</button></td>
+    <td onmouseover="showbutton('but43')" onmouseout="hidebutton('but43')">{$povertysl.fmjhzdjbcd}<button id="but43" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjhzdjbcd')">修改</button></td>
+    <td onmouseover="showbutton('but44')" onmouseout="hidebutton('but44')">{$povertysl.fmjhzdjbbz}<button id="but44" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjhzdjbbz')">修改</button></td>
+    <tr>
+    <td>父母一方患重大疾病（不含残疾） </td>
+    <td>D</td>
+    <td>相关证明、户口簿</td>
+    <td>相关证明、户口簿</td>
+    <td onmouseover="showbutton('but45')" onmouseout="hidebutton('but45')">{$povertysl.fmyfhzdjbfh}<button id="but45" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfhzdjbfh')">修改</button></td>
+    <td onmouseover="showbutton('but46')" onmouseout="hidebutton('but46')">{$povertysl.fmyfhzdjbsh}<button id="but46" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfhzdjbsh')">修改</button></td>
+    <td onmouseover="showbutton('but47')" onmouseout="hidebutton('but47')">{$povertysl.fmyfhzdjbcd}<button id="but47" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfhzdjbcd')">修改</button></td>
+    <td onmouseover="showbutton('but48')" onmouseout="hidebutton('but48')">{$povertysl.fmyfhzdjbbz}<button id="but48" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfhzdjbbz')">修改</button></td>
+    <tr>
+    <td>其他家庭成员（含学生本人）患重大疾病（不含残疾） </td>
+    <td>E</td>
+    <td>相关证明、户口簿</td>
+    <td>相关证明、户口簿</td>
+    <td onmouseover="showbutton('but49')" onmouseout="hidebutton('but49')">{$povertysl.qtjtcyhzdjbfh}<button id="but49" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','qtjtcyhzdjbfh')">修改</button></td>
+    <td onmouseover="showbutton('but50')" onmouseout="hidebutton('but50')">{$povertysl.qtjtcyhzdjbsh}<button id="but50" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','qtjtcyhzdjbsh')">修改</button></td>
+    <td onmouseover="showbutton('but51')" onmouseout="hidebutton('but51')">{$povertysl.qtjtcyhzdjbcd}<button id="but51" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','qtjtcyhzdjbcd')">修改</button></td>
+    <td onmouseover="showbutton('but52')" onmouseout="hidebutton('but52')">{$povertysl.qtjtcyhzdjbbz}<button id="but52" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','qtjtcyhzdjbbz')">修改</button></td>
+    <tr>
+    <td>家庭遭受重大自然灾害，受灾严重（一年以上两年以内） </td>
+    <td>B</td>
+    <td>民政等部门相关证明</td>
+    <td>民政等部门相关证明</td>
+    <td onmouseover="showbutton('but53')" onmouseout="hidebutton('but53')">{$povertysl.lnzdzrzhfh}<button id="but53" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdzrzhfh')">修改</button></td>
+    <td onmouseover="showbutton('but54')" onmouseout="hidebutton('but54')">{$povertysl.lnzdzrzhsh}<button id="but54" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdzrzhsh')">修改</button></td>
+    <td onmouseover="showbutton('but55')" onmouseout="hidebutton('but55')">{$povertysl.lnzdzrzhcd}<button id="but55" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdzrzhcd')">修改</button></td>
+    <td onmouseover="showbutton('but56')" onmouseout="hidebutton('but56')">{$povertysl.lnzdzrzhbz}<button id="but56" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdzrzhbz')">修改</button></td>
+    <tr>
+    <td>家庭遭重大突发意外事件（不含自然灾害）（一年以上两年以内） </td>
+    <td>B</td>
+    <td>相关证明</td>
+    <td>相关证明</td>
+    <td onmouseover="showbutton('but57')" onmouseout="hidebutton('but57')">{$povertysl.lnzdtfsjfh}<button id="but57" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdtfsjfh')">修改</button></td>
+    <td onmouseover="showbutton('but58')" onmouseout="hidebutton('but58')">{$povertysl.lnzdtfsjsh}<button id="but58" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdtfsjsh')">修改</button></td>
+    <td onmouseover="showbutton('but59')" onmouseout="hidebutton('but59')">{$povertysl.lnzdtfsjcd}<button id="but59" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdtfsjcd')">修改</button></td>
+    <td onmouseover="showbutton('but60')" onmouseout="hidebutton('but60')">{$povertysl.lnzdtfsjbz}<button id="but60" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','lnzdtfsjbz')">修改</button></td>
+    <tr>
+    <td>父亲为残疾人（一级残疾） </td>
+    <td>C</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but61')" onmouseout="hidebutton('but61')">{$povertysl.fqyjcjfh}<button id="but61" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqyjcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but62')" onmouseout="hidebutton('but62')">{$povertysl.fqyjcjsh}<button id="but62" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqyjcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but63')" onmouseout="hidebutton('but63')">{$povertysl.fqyjcjcd}<button id="but63" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqyjcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but64')" onmouseout="hidebutton('but64')">{$povertysl.fqyjcjbz}<button id="but64" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqyjcjbz')">修改</button></td>
+    <tr>
+    <td>父亲为残疾人（二级残疾） </td>
+    <td>F</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but65')" onmouseout="hidebutton('but65')">{$povertysl.fqejcjfh}<button id="but65" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqejcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but66')" onmouseout="hidebutton('but66')">{$povertysl.fqejcjsh}<button id="but66" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqejcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but67')" onmouseout="hidebutton('but67')">{$povertysl.fqejcjcd}<button id="but67" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqejcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but68')" onmouseout="hidebutton('but68')">{$povertysl.fqejcjbz}<button id="but68" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqejcjbz')">修改</button></td>
+    <tr>
+    <td>父亲为残疾人（三级残疾） </td>
+    <td>G</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but69')" onmouseout="hidebutton('but69')">{$povertysl.fqxjcjfh}<button id="but69" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqxjcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but70')" onmouseout="hidebutton('but70')">{$povertysl.fqxjcjsh}<button id="but70" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqxjcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but71')" onmouseout="hidebutton('but71')">{$povertysl.fqxjcjcd}<button id="but71" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqxjcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but72')" onmouseout="hidebutton('but72')">{$povertysl.fqxjcjbz}<button id="but72" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqxjcjbz')">修改</button></td>
+    <tr>
+    <td>父亲为残疾人（四级残疾） </td>
+    <td>G</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but73')" onmouseout="hidebutton('but73')">{$povertysl.fqsjcjfh}<button id="but73" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqsjcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but74')" onmouseout="hidebutton('but74')">{$povertysl.fqsjcjsh}<button id="but74" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqsjcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but75')" onmouseout="hidebutton('but75')">{$povertysl.fqsjcjcd}<button id="but75" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqsjcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but76')" onmouseout="hidebutton('but76')">{$povertysl.fqsjcjbz}<button id="but76" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fqsjcjbz')">修改</button></td>
+    <tr>
+    <td>母亲为残疾人（一级残疾） </td>
+    <td>C</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but77')" onmouseout="hidebutton('but77')">{$povertysl.mqyjcjfh}<button id="but77" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqyjcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but78')" onmouseout="hidebutton('but78')">{$povertysl.mqyjcjsh}<button id="but78" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqyjcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but79')" onmouseout="hidebutton('but79')">{$povertysl.mqyjcjcd}<button id="but79" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqyjcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but80')" onmouseout="hidebutton('but80')">{$povertysl.mqyjcjbz}<button id="but80" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqyjcjbz')">修改</button></td>
+    <tr>
+    <td>母亲为残疾人（二级残疾） </td>
+    <td>F</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but81')" onmouseout="hidebutton('but81')">{$povertysl.mqejcjfh}<button id="but81" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqejcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but82')" onmouseout="hidebutton('but82')">{$povertysl.mqejcjsh}<button id="but82" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqejcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but83')" onmouseout="hidebutton('but83')">{$povertysl.mqejcjcd}<button id="but83" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqejcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but84')" onmouseout="hidebutton('but84')">{$povertysl.mqejcjbz}<button id="but84" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqejcjbz')">修改</button></td>
+    <tr>
+    <td>母亲为残疾人（三级残疾） </td>
+    <td>G</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but85')" onmouseout="hidebutton('but85')">{$povertysl.mqxjcjfh}<button id="but85" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqxjcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but86')" onmouseout="hidebutton('but86')">{$povertysl.mqxjcjsh}<button id="but86" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqxjcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but87')" onmouseout="hidebutton('but87')">{$povertysl.mqxjcjcd}<button id="but87" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqxjcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but88')" onmouseout="hidebutton('but88')">{$povertysl.mqxjcjbz}<button id="but88" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqxjcjbz')">修改</button></td>
+    <tr>
+    <td>母亲为残疾人（四级残疾） </td>
+    <td>G</td>
+    <td>残疾人证、户口簿</td>
+    <td>残疾人证、户口簿</td>
+    <td onmouseover="showbutton('but89')" onmouseout="hidebutton('but89')">{$povertysl.mqsjcjfh}<button id="but89" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqsjcjfh')">修改</button></td>
+    <td onmouseover="showbutton('but90')" onmouseout="hidebutton('but90')">{$povertysl.mqsjcjsh}<button id="but90" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqsjcjsh')">修改</button></td>
+    <td onmouseover="showbutton('but91')" onmouseout="hidebutton('but91')">{$povertysl.mqsjcjcd}<button id="but91" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqsjcjcd')">修改</button></td>
+    <td onmouseover="showbutton('but92')" onmouseout="hidebutton('but92')">{$povertysl.mqsjcjbz}<button id="but92" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mqsjcjbz')">修改</button></td>
+    <tr>
+    <td>父母均没有工作（不含农村种植户或养殖户） </td>
+    <td>D</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but93')" onmouseout="hidebutton('but93')">{$povertysl.fmjmygzfh}<button id="but93" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjmygzfh')">修改</button></td>
+    <td onmouseover="showbutton('but94')" onmouseout="hidebutton('but94')">{$povertysl.fmjmygzsh}<button id="but94" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjmygzsh')">修改</button></td>
+    <td onmouseover="showbutton('but95')" onmouseout="hidebutton('but95')">{$povertysl.fmjmygzcd}<button id="but95" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjmygzcd')">修改</button></td>
+    <td onmouseover="showbutton('but96')" onmouseout="hidebutton('but96')">{$povertysl.fmjmygzbz}<button id="but96" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjmygzbz')">修改</button></td>
+    <tr>
+    <td>父母一方没有工作（不含农村种植户或养殖户） </td>
+    <td>F</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but97')" onmouseout="hidebutton('but97')">{$povertysl.fmyfmygzfh}<button id="but97" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfmygzfh')">修改</button></td>
+    <td onmouseover="showbutton('but98')" onmouseout="hidebutton('but98')">{$povertysl.fmyfmygzsh}<button id="but98" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfmygzsh')">修改</button></td>
+    <td onmouseover="showbutton('but99')" onmouseout="hidebutton('but99')">{$povertysl.fmyfmygzcd}<button id="but99" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfmygzcd')">修改</button></td>
+    <td onmouseover="showbutton('but100')" onmouseout="hidebutton('but100')">{$povertysl.fmyfmygzbz}<button id="but100" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfmygzbz')">修改</button></td>
+    <tr>
+    <td>农村个体小型种植户或个体小型养殖户（或两） </td>
+    <td>G</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but101')" onmouseout="hidebutton('but101')">{$povertysl.ncgtxxzzhfh}<button id="but101" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ncgtxxzzhfh')">修改</button></td>
+    <td onmouseover="showbutton('but102')" onmouseout="hidebutton('but102')">{$povertysl.ncgtxxzzhsh}<button id="but102" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ncgtxxzzhsh')">修改</button></td>
+    <td onmouseover="showbutton('but103')" onmouseout="hidebutton('but103')">{$povertysl.ncgtxxzzhcd}<button id="but103" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ncgtxxzzhcd')">修改</button></td>
+    <td onmouseover="showbutton('but104')" onmouseout="hidebutton('but104')">{$povertysl.ncgtxxzzhbz}<button id="but104" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','ncgtxxzzhbz')">修改</button></td>
+    <tr>
+    <td>父母一方抚养 </td>
+    <td>F</td>
+    <td>相关证明户口簿</td>
+    <td>相关证明户口簿</td>
+    <td onmouseover="showbutton('but105')" onmouseout="hidebutton('but105')">{$povertysl.fmyffyfh}<button id="but105" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyffyfh')">修改</button></td>
+    <td onmouseover="showbutton('but106')" onmouseout="hidebutton('but106')">{$povertysl.fmyffysh}<button id="but106" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyffysh')">修改</button></td>
+    <td onmouseover="showbutton('but107')" onmouseout="hidebutton('but107')">{$povertysl.fmyffycd}<button id="but107" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyffycd')">修改</button></td>
+    <td onmouseover="showbutton('but108')" onmouseout="hidebutton('but108')">{$povertysl.fmyffybz}<button id="but108" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyffybz')">修改</button></td>
+    <tr>
+    <td>家庭在学人数（2人（含本人）以上在上学） </td>
+    <td>F</td>
+    <td>户口簿、学生证</td>
+    <td>户口簿、学生证</td>
+    <td onmouseover="showbutton('but109')" onmouseout="hidebutton('but109')">{$povertysl.jtzxrsfh}<button id="but109" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzxrsfh')">修改</button></td>
+    <td onmouseover="showbutton('but110')" onmouseout="hidebutton('but110')">{$povertysl.jtzxrssh}<button id="but110" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzxrssh')">修改</button></td>
+    <td onmouseover="showbutton('but111')" onmouseout="hidebutton('but111')">{$povertysl.jtzxrscd}<button id="but111" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzxrscd')">修改</button></td>
+    <td onmouseover="showbutton('but112')" onmouseout="hidebutton('but112')">{$povertysl.jtzxrsbz}<button id="but112" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzxrsbz')">修改</button></td>
+    <tr>
+    <td>父母年龄（父母均为60周岁以上（含60周岁）） </td>
+    <td>F</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but113')" onmouseout="hidebutton('but113')">{$povertysl.fmjwlssysfh}<button id="but113" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwlssysfh')">修改</button></td>
+    <td onmouseover="showbutton('but114')" onmouseout="hidebutton('but114')">{$povertysl.fmjwlssyssh}<button id="but114" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwlssyssh')">修改</button></td>
+    <td onmouseover="showbutton('but115')" onmouseout="hidebutton('but115')">{$povertysl.fmjwlssyscd}<button id="but115" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwlssyscd')">修改</button></td>
+    <td onmouseover="showbutton('but116')" onmouseout="hidebutton('but116')">{$povertysl.fmjwlssysbz}<button id="but116" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwlssysbz')">修改</button></td>
+    <tr>
+    <td>父母年龄 （父母一方为60周岁以上（含60周岁））</td>
+    <td>F</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but117')" onmouseout="hidebutton('but117')">{$povertysl.fmyfwlszsysfh}<button id="but117" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwlszsysfh')">修改</button></td>
+    <td onmouseover="showbutton('but118')" onmouseout="hidebutton('but118')">{$povertysl.fmyfwlszsyssh}<button id="but118" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwlszsyssh')">修改</button></td>
+    <td onmouseover="showbutton('but119')" onmouseout="hidebutton('but119')">{$povertysl.fmyfwlszsyscd}<button id="but119" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwlszsyscd')">修改</button></td>
+    <td onmouseover="showbutton('but120')" onmouseout="hidebutton('but120')">{$povertysl.fmyfwlszsysbz}<button id="but120" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwlszsysbz')">修改</button></td>
+    <tr>
+    <td>赡养老人 （赡养两位以上老人（70周岁以上））</td>
+    <td>F</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but121')" onmouseout="hidebutton('but121')">{$povertysl.sylrysfh}<button id="but121" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylrysfh')">修改</button></td>
+    <td onmouseover="showbutton('but122')" onmouseout="hidebutton('but122')">{$povertysl.sylryssh}<button id="but122" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylryssh')">修改</button></td>
+    <td onmouseover="showbutton('but123')" onmouseout="hidebutton('but123')">{$povertysl.sylryscd}<button id="but123" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylryscd')">修改</button></td>
+    <td onmouseover="showbutton('but124')" onmouseout="hidebutton('but124')">{$povertysl.sylrysbz}<button id="but124" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylrysbz')">修改</button></td>
+    <tr>
+    <td>赡养老人 （赡养两位（含两位）及以下老人（70周岁以上）） </td>
+    <td>F</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but125')" onmouseout="hidebutton('but125')">{$povertysl.sylryxfh}<button id="but125" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylryxfh')">修改</button></td>
+    <td onmouseover="showbutton('but126')" onmouseout="hidebutton('but126')">{$povertysl.sylryxsh}<button id="but126" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylryxsh')">修改</button></td>
+    <td onmouseover="showbutton('but127')" onmouseout="hidebutton('but127')">{$povertysl.sylryxcd}<button id="but127" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylryxcd')">修改</button></td>
+    <td onmouseover="showbutton('but128')" onmouseout="hidebutton('but128')">{$povertysl.sylryxbz}<button id="but128" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','sylryxbz')">修改</button></td>
+    <tr>
+    <td>家庭人均年收入 （就读学校所在地最低生活保障线下）</td>
+    <td>F</td>
+    <td>相关证明、户口簿</td>
+    <td>相关证明、户口簿</td>
+    <td onmouseover="showbutton('but129')" onmouseout="hidebutton('but129')">{$povertysl.zdshbzxxfh}<button id="but129" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxxfh')">修改</button></td>
+    <td onmouseover="showbutton('but130')" onmouseout="hidebutton('but130')">{$povertysl.zdshbzxxsh}<button id="but130" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxxsh')">修改</button></td>
+    <td onmouseover="showbutton('but131')" onmouseout="hidebutton('but131')">{$povertysl.zdshbzxxcd}<button id="but131" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxxcd')">修改</button></td>
+    <td onmouseover="showbutton('but132')" onmouseout="hidebutton('but132')">{$povertysl.zdshbzxxbz}<button id="but132" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxxbz')">修改</button></td>
+    <tr>
+    <td>家庭人均年收入 （就读学校所在地最低生活保障线上2倍以内） </td>
+    <td>G</td>
+    <td>相关证明、户口簿</td>
+    <td>相关证明、户口簿</td>
+    <td onmouseover="showbutton('but133')" onmouseout="hidebutton('but133')">{$povertysl.zdshbzxsfh}<button id="but133" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxsfh')">修改</button></td>
+    <td onmouseover="showbutton('but134')" onmouseout="hidebutton('but134')">{$povertysl.zdshbzxssh}<button id="but134" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxssh')">修改</button></td>
+    <td onmouseover="showbutton('but135')" onmouseout="hidebutton('but135')">{$povertysl.zdshbzxscd}<button id="but135" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxscd')">修改</button></td>
+    <td onmouseover="showbutton('but136')" onmouseout="hidebutton('but136')">{$povertysl.zdshbzxsbz}<button id="but136" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','zdshbzxsbz')">修改</button></td>
+    <tr>
+    <td>父母文化（父母均为初中及以下文化程度） </td>
+    <td>G</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but137')" onmouseout="hidebutton('but137')">{$povertysl.fmjwczyxfh}<button id="but137" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwczyxfh')">修改</button></td>
+    <td onmouseover="showbutton('but138')" onmouseout="hidebutton('but138')">{$povertysl.fmjwczyxsh}<button id="but138" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwczyxsh')">修改</button></td>
+    <td onmouseover="showbutton('but139')" onmouseout="hidebutton('but139')">{$povertysl.fmjwczyxcd}<button id="but139" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwczyxcd')">修改</button></td>
+    <td onmouseover="showbutton('but140')" onmouseout="hidebutton('but140')">{$povertysl.fmjwczyxbz}<button id="but140" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmjwczyxbz')">修改</button></td>
+    <tr>
+    <td>父母文化（父母一方为初中及以下文化程度） </td>
+    <td>G</td>
+    <td>户口簿、相关证明</td>
+    <td>户口簿、相关证明</td>
+    <td onmouseover="showbutton('but141')" onmouseout="hidebutton('but141')">{$povertysl.fmyfwczyxfh}<button id="but141" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwczyxfh')">修改</button></td>
+    <td onmouseover="showbutton('but142')" onmouseout="hidebutton('but142')">{$povertysl.fmyfwczyxsh}<button id="but142" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwczyxsh')">修改</button></td>
+    <td onmouseover="showbutton('but143')" onmouseout="hidebutton('but143')">{$povertysl.fmyfwczyxcd}<button id="but143" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwczyxcd')">修改</button></td>
+    <td onmouseover="showbutton('but144')" onmouseout="hidebutton('but144')">{$povertysl.fmyfwczyxbz}<button id="but144" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','fmyfwczyxbz')">修改</button></td>
+    <tr>
+    <td>户籍所在地 （国家核定的680个贫困县（区））</td>
+    <td>G</td>
+    <td>户口簿</td>
+    <td>户口簿</td>
+    <td onmouseover="showbutton('but145')" onmouseout="hidebutton('but145')">{$povertysl.gjhdpkqfh}<button id="but145" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gjhdpkqfh')">修改</button></td>
+    <td onmouseover="showbutton('but146')" onmouseout="hidebutton('but146')">{$povertysl.gjhdpkqsh}<button id="but146" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gjhdpkqsh')">修改</button></td>
+    <td onmouseover="showbutton('but147')" onmouseout="hidebutton('but147')">{$povertysl.gjhdpkqcd}<button id="but147" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gjhdpkqcd')">修改</button></td>
+    <td onmouseover="showbutton('but148')" onmouseout="hidebutton('but148')">{$povertysl.gjhdpkqbz}<button id="but148" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gjhdpkqbz')">修改</button></td>
+    <tr>
+    <td>户籍所在地（680个贫困县以外的革命老区（含中央苏区）） </td>
+    <td>G</td>
+    <td>户口簿</td>
+    <td>户口簿</td>
+    <td onmouseover="showbutton('but149')" onmouseout="hidebutton('but149')">{$povertysl.gmlqfh}<button id="but149" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gmlqfh')">修改</button></td>
+    <td onmouseover="showbutton('but150')" onmouseout="hidebutton('but150')">{$povertysl.gmlqsh}<button id="but150" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gmlqsh')">修改</button></td>
+    <td onmouseover="showbutton('but151')" onmouseout="hidebutton('but151')">{$povertysl.gmlqcd}<button id="but151" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gmlqcd')">修改</button></td>
+    <td onmouseover="showbutton('but152')" onmouseout="hidebutton('but152')">{$povertysl.gmlqbz}<button id="but152" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','gmlqbz')">修改</button></td>
+    <tr>
+    <td>户籍所在地（广东省扶贫开发重点县（不含革命老区）） </td>
+    <td>G</td>
+    <td>户口簿</td>
+    <td>户口簿</td>
+    <td onmouseover="showbutton('but153')" onmouseout="hidebutton('but153')">{$povertysl.hjszdfh}<button id="but153" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjszdfh')">修改</button></td>
+    <td onmouseover="showbutton('but154')" onmouseout="hidebutton('but154')">{$povertysl.hjszdsh}<button id="but154" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjszdsh')">修改</button></td>
+    <td onmouseover="showbutton('but155')" onmouseout="hidebutton('but155')">{$povertysl.hjszdcd}<button id="but155" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjszdcd')">修改</button></td>
+    <td onmouseover="showbutton('but156')" onmouseout="hidebutton('but156')">{$povertysl.hjszdbz}<button id="but156" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjszdbz')">修改</button></td>
+    <tr>
+    <td>户籍性质 （农村户籍）</td>
+    <td>G</td>
+    <td>户口簿</td>
+    <td>户口簿</td>
+    <td onmouseover="showbutton('but157')" onmouseout="hidebutton('but157')">{$povertysl.hjxzfh}<button id="but157" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjxzfh')">修改</button></td>
+    <td onmouseover="showbutton('but158')" onmouseout="hidebutton('but158')">{$povertysl.hjxzsh}<button id="but158" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjxzsh')">修改</button></td>
+    <td onmouseover="showbutton('but159')" onmouseout="hidebutton('but159')">{$povertysl.hjxzcd}<button id="but159" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjxzcd')">修改</button></td>
+    <td onmouseover="showbutton('but160')" onmouseout="hidebutton('but160')">{$povertysl.hjxzbz}<button id="but160" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','hjxzbz')">修改</button></td>
+    <tr>
+    <td>民族（少数民族） </td>
+    <td>G</td>
+    <td>户口簿</td>
+    <td>户口簿</td>
+    <td onmouseover="showbutton('but161')" onmouseout="hidebutton('but161')">{$povertysl.mzssmzfh}<button id="but161" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mzssmzfh')">修改</button></td>
+    <td onmouseover="showbutton('but162')" onmouseout="hidebutton('but162')">{$povertysl.mzssmzsh}<button id="but162" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mzssmzsh')">修改</button></td>
+    <td onmouseover="showbutton('but163')" onmouseout="hidebutton('but163')">{$povertysl.mzssmzcd}<button id="but163" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mzssmzcd')">修改</button></td>
+    <td onmouseover="showbutton('but164')" onmouseout="hidebutton('but164')">{$povertysl.mzssmzbz}<button id="but164" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','mzssmzbz')">修改</button></td>
+    <tr>
+    <td>学费、住宿费（学费、住宿费在9501元至20000元） </td>
+    <td>G</td>
+    <td> </td>
+    <td> </td>
+    <td onmouseover="showbutton('but165')" onmouseout="hidebutton('but165')">{$povertysl.xfzsf1fh}<button id="but165" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf1fh')">修改</button></td>
+    <td onmouseover="showbutton('but166')" onmouseout="hidebutton('but166')">{$povertysl.xfzsf1sh}<button id="but166" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf1sh')">修改</button></td>
+    <td onmouseover="showbutton('but167')" onmouseout="hidebutton('but167')">{$povertysl.xfzsf1cd}<button id="but167" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf1cd')">修改</button></td>
+    <td onmouseover="showbutton('but168')" onmouseout="hidebutton('but168')">{$povertysl.xfzsf1bz}<button id="but168" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf1bz')">修改</button></td>
+    <tr>
+    <td>学费、住宿费（学费、住宿费在20001元以上（仅对高校学生））</td>
+    <td>G</td>
+    <td> </td>
+    <td> </td>
+    <td onmouseover="showbutton('but169')" onmouseout="hidebutton('but169')">{$povertysl.xfzsf2fh}<button id="but169" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf2fh')">修改</button></td>
+    <td onmouseover="showbutton('but170')" onmouseout="hidebutton('but170')">{$povertysl.xfzsf2sh}<button id="but170" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf2sh')">修改</button></td>
+    <td onmouseover="showbutton('but171')" onmouseout="hidebutton('but171')">{$povertysl.xfzsf2cd}<button id="but171" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf2cd')">修改</button></td>
+    <td onmouseover="showbutton('but172')" onmouseout="hidebutton('but172')">{$povertysl.xfzsf2bz}<button id="but172" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','xfzsf2bz')">修改</button></td>
+    <tr>
+    <td>家庭资产（无房产无汽车户） </td>
+    <td>G</td>
+    <td>相关证明、户口簿</td>
+    <td>相关证明、户口簿</td>
+    <td onmouseover="showbutton('but173')" onmouseout="hidebutton('but173')">{$povertysl.jtzcfh}<button id="but173" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzcfh')">修改</button></td>
+    <td onmouseover="showbutton('but174')" onmouseout="hidebutton('but174')">{$povertysl.jtzcsh}<button id="but174" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzcsh')">修改</button></td>
+    <td onmouseover="showbutton('but175')" onmouseout="hidebutton('but175')">{$povertysl.jtzccd}<button id="but175" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzccd')">修改</button></td>
+    <td onmouseover="showbutton('but176')" onmouseout="hidebutton('but176')">{$povertysl.jtzcbz}<button id="but176" style="display:none;float:right;" onclick="changestu('{$povertysl.stuid}','jtzcbz')">修改</button></td>
+    <tr>
+</table>
+<br/><br/>
+
+<button onclick="back()">返回</button>
+<a href="printexcel?&stuid={$povertysl.stuid}">导出</a>
+</div>    
+  <br/><br/>  <br/><br/>  
+</body>  
+</html> 
+
+
+

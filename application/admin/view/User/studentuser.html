@@ -1,0 +1,135 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学生账号管理</title>
+<link type="text/css" rel="stylesheet" href="__STATIC__/admin/css/style.css" />
+<script type="text/javascript" src="__STATIC__/admin/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/menu.js"></script>
+<script type="text/javascript" src="__STATIC__/admin/js/jquery.js"></script>
+</style> 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.one').click(function(){
+      $('.box1').show();
+      $('.box2').hide();
+      });
+    $('.two').click(function(){
+      $('.box2').show();
+      $('.box1').hide();
+      });
+    $('.bt').click(function(){
+      $('.box1').hide();
+      });
+    $('.btn').click(function(){
+      $('.box2').hide();
+      });
+  });
+
+function checkstu() {  
+   var c1 = document.getElementById("c1").value;
+   var c2 = document.getElementById("c2").value;
+   var c3 = document.getElementById("c3").value;
+   var c4 = document.getElementById("c4").value;
+   if(c4 == ""){c4 = "notype"};
+    window.frameSecondBord.location.href= "checkall?yuanxi="+c1+"&banbie="+c2+"&zhuanye="+c3+"&xuejihao="+c4; 
+  }
+
+  function deletestu() {  
+      if (confirm("您确定删除所筛选的条件吗")) {  
+             var c1 = document.getElementById("c1").value;
+             var c2 = document.getElementById("c2").value;
+             var c3 = document.getElementById("c3").value;
+             var c4 = document.getElementById("c4").value;
+             if(c4 == ""){c4 = "notype"};
+              window.frameSecondBord.location.href= "deleteall?yuanxi="+c1+"&banbie="+c2+"&zhuanye="+c3+"&xuejihao="+c4; 
+        } else {  
+              return false;
+          }  
+  }
+
+function deleteallstudent(){
+	if (confirm("您确定清空吗(清空后不可恢复)")) {  
+            	window.location.href= "deleteallstudent";
+        }  
+        else {  
+            return false;
+        }  
+
+}
+
+
+function loading(){
+  document.getElementById("txtHint").innerHTML="&nbsp&nbsp导入中。。。";
+}
+
+</script>
+</head>
+
+<body>
+<div id="searchlist">
+<br/>
+&nbsp&nbsp
+学院：<select id="c1">
+<option value="notype">全部</option>
+{volist name="yuanxis" id="vo"}
+<option value="{$vo.yuanxi}">{$vo.yuanxi}</option>
+{/volist}
+</select>
+&nbsp&nbsp
+班级：<select id="c2">
+<option value="notype">全部</option>
+{volist name="banbies" id="vo"}
+<option value="{$vo.banbie}">{$vo.banbie}</option>
+{/volist}
+</select>
+&nbsp&nbsp
+专业：<select id="c3">
+<option value="notype">全部</option>
+{volist name="zhuanyes" id="vo"}
+<option value="{$vo.zhuanye}">{$vo.zhuanye}</option>
+{/volist}
+</select>
+&nbsp&nbsp
+学号：<input id="c4" type="text"  >
+
+
+       <button onclick="checkstu()">查询</button>
+      <button onclick="deletestu()">删除</button> 
+      <button onclick="deleteallstudent()">清空学生</button>
+      <div id="addstu" class="addstu" >
+              <input type="button" class="one" value="添加学生"  />
+              <input type="button" class="two" value="批量导入学生" />
+              <a href="studentsdemo" target="frameSecondBord">模板</a>
+              <p id="txtHint"></p>
+
+          <div class="box1" style="display:none;">
+            <form id="addstuform" action="addstudent" method="post" > 
+              <h3>添加学生</h3>
+                <label for="userName"><span>学生账号</span><input id="stuid" name="stuid" type="text" /></label>
+                <label for="passWord"><span>密码</span><input id="password" name="password" type="password" /></label>
+                <label for="xingming"><span>姓名</span><input id="xingming" name="xingming" type="text" /></label>
+                <label for="xingbie"><span>性别</span><input id="xingbie" name="xingbie" type="text" /></label>
+                <label for="yuanxi"><span>院系</span><input id="yuanxi" name="yuanxi" type="text" /></label>
+                <label for="banbie"><span>班别</span><input id="banbie" name="banbie" type="text" /></label>
+                <label for="sfzh"><span>身份证号</span><input id="sfzh" name="sfzh" type="text" /></label>
+                <label for="zhuanye"><span>专业</span><input id="zhuanye" name="zhuanye" type="text" /></label>
+                <label><input name="" type="submit" class="bt" value="添加" /></label>
+                </form>
+          </div>  
+
+            <div class="box2" style="display:none;">
+              <form id="addform" action="pushcsvstudent" method="post" enctype="multipart/form-data"> 
+               <input type="file" name="file"> <input onclick="loading()" type="submit" class="btn" value="导入学生"> 导入前请将excel文件转为css文件 
+               </form>
+            </div>
+            
+    </div>
+</div>
+
+
+<iframe id="frameSecondBord" name="frameSecondBord" frameborder="0" width="100%" height="100%" src="studentshow"></iframe>
+
+<script>navList(12);</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="__STATIC__/index/css/table.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/index/js/table.js"></script>  
+
+<title>国家助学金申请审批表</title>
+</head>
+<body id="page">
+<form method="post"  action="postdate" onSubmit="return checktext('Countrygrants')">
+<h2>基本情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>学校</th>
+    <td><input id="xuexiao" type="text" name="xuexiao" style="width:100px" value={$countrygrants.xuexiao}></td>
+  </tr>
+  <tr>
+    <th>院系</th>
+    <td><input id="yuanxi" type="text" name="yuanxi" style="width:100px" value={$countrygrants.yuanxi}></td>
+  </tr>
+  <tr>
+    <th>专业</th>
+    <td><input id="zhuanye" type="text" name="zhuanye" style="width:100px" value={$countrygrants.zhuanye}></td>
+  </tr>
+  <tr>
+    <th>姓名</th>
+    <td><input id="xingming" type="text" name="xingming" style="width:100px" value={$countrygrants.xingming}></td>
+  </tr>
+  <tr>
+    <th>性别</th>
+    <td><input id="xingbie" type="text" name="xingbie" style="width:100px" value={$countrygrants.xingbie}></td>
+  </tr>
+  <tr>
+    <th>出生年月</th>
+    <td><input id="csny" type="text" name="csny" style="width:100px" value={$countrygrants.csny}></td>
+  </tr>
+   <tr>
+    <th>民族</th>
+    <td><input id="minzu" type="text" name="minzu" style="width:100px" value={$countrygrants.minzu}></td>
+  </tr>
+  <tr>
+    <th>政治面貌</th>
+    <td><input id="zzmm" type="text" name="zzmm" style="width:100px" value={$countrygrants.zzmm}></td>
+  </tr>
+  <tr>
+    <th>联系电话</th>
+    <td><input id="lxdh" type="text" name="lxdh" style="width:100px" value={$countrygrants.lxdh}></td>
+  </tr>
+  <tr>
+    <th>入学时间</th>
+    <td><input id="rxsj" type="text" name="rxsj" style="width:100px" value={$countrygrants.rxsj}></td>
+  </tr>
+  <tr>
+    <th>班级</th>
+    <td><input id="banji" type="text" name="banji" style="width:100px" value={$countrygrants.banji}></td>
+  </tr>
+  <tr>
+    <th>学号</th>
+    <td><input id="xuehao" type="text" name="xuehao" style="width:100px" value={$countrygrants.xuehao}></td>
+  </tr>
+   <tr>
+    <th>身份证号</th>
+    <td><input id="sfzh" type="text" name="sfzh" style="width:100px" value={$countrygrants.sfzh}></td>
+  </tr>
+   <tr>
+    <th>经学校认定的经济困难程度</th>
+    <td><input name="kncd" type="radio" value="一般困难" /> 一般困难 <input name="kncd" type="radio" value="困难" /> 困难 <input name="kncd" type="radio" value="特殊困难" /> 特殊困难 </td>
+    <script>initradio('kncd',"{$countrygrants.kncd}");</script>
+  </tr>
+  </table>
+
+  <h2>家庭情况</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>家庭人口总数</th>
+    <td><input id="rkzs" type="text" name="rkzs" style="width:30px" value={$countrygrants.rkzs}></td>
+  </tr>
+  <tr>
+    <th>家庭人均月收入（元）</th>
+    <td><input id="yueshouru" type="text" name="yueshouru" style="width:30px" value={$countrygrants.yueshouru}></td>
+  </tr>
+  <tr>
+    <th>家庭住址</th>
+    <td><input id="jtzz" type="text" name="jtzz"  style="width:30px" value={$countrygrants.jtzz}></td>
+  </tr>
+  <tr>
+    <th>邮政编码</th>
+    <td><input id="yzbm" type="text" name="yzbm" style="width:30px" value={$countrygrants.yzbm}></td>
+  </tr>
+</table>
+
+
+
+  <h2>申请理由</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>申请理由</th>
+    <td><textarea id="sqly" name="sqly"style="width: 400px; height: 201px;padding: 10px 3px 3px 5px;" >{$countrygrants.sqly}</textarea></td>
+  </tr>
+</table>
+
+        <div id='submit'  align = "center" >
+        <button type="submit" >提交</button><br/><br/>
+        </div>
+  </from>
+</body>
+</html>
